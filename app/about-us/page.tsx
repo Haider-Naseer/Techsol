@@ -1,4 +1,4 @@
-import { AboutUs } from "@/components/Home/aboutUs";
+import { AboutUs } from "@/components/about-us/page";
 import { SliderCarousel } from "@/components/ui/sliderCarousel";
 import Image from "next/image";
 

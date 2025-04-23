@@ -1,12 +1,12 @@
-import { AboutUs } from "@/components/Home/aboutUs";
-import { CallToAction } from "@/components/Home/callToAction";
-import Consulting from "@/components/Home/consulting";
-import { ContactUs } from "@/components/Home/contactUs";
-import { HeroSection } from "@/components/Home/heroSection";
-import OurHistory from "@/components/Home/ourHistory";
-import OurProcess from "@/components/Home/ourProcess";
-import OurServices from "@/components/Home/ourServices";
-import OurTeam from "@/components/Home/ourTeam";
+import { AboutUs } from "@/components/about-us/page";
+import { CallToAction } from "@/components/call-to-action/page";
+import Consulting from "@/components/consulting/page";
+import { ContactUs } from "@/components/contact-us/page";
+import { HeroSection } from "@/components/home-hero-section/page";
+import OurHistory from "@/components/our-history/page";
+import OurProcess from "@/components/our-process/page";
+import OurServices from "@/components/our-services/page";
+import OurTeam from "@/components/our-team/page";
 export default function Home() {
   return (
     <>
