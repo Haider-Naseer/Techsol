@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.main-contain {
+  max-width: 1440px;
+  padding: 0px 80px;
+  margin: 0 auto;
+}
+
+.container-max-width{
+  max-width: 1440px;
+}
+
+.section-gap {
+  padding: 80px 0px;
+}
