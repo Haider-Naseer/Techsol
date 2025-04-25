@@ -3,15 +3,17 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 export const LandingPageHeader = () => {
   const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const homePath = [
     "/",
     "/advisory-supply-chain",
-    "/digital-platform",
     "/digital-platform",
   ];
 
@@ -41,39 +43,79 @@ export const LandingPageHeader = () => {
   ];
 
   return (
-    <header className="z-999 w-full py-[23px] bg-[#1A94D5] z-[9999]" role="banner" aria-label="Main navigation">
+    <header className="z-[9999] w-full py-[23px] bg-[#1A94D5]" role="banner" aria-label="Main navigation">
       <div className="main-contain flex justify-between items-center relative">
-        <div>
-          <Link href="/">
-            <Image src="/assets/icons/Logo.svg" alt="logo" width={123} height={70} />
-          </Link>
-        </div>
-        <div className="flex items-center w-full justify-center">
-          <nav className="flex gap-[60px]" aria-label="Main navigation">
-            {navItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative"
-                onMouseEnter={() => item.hasSubmenu && setIsHovered(true)}
-                onMouseLeave={() => item.hasSubmenu && setIsHovered(false)}
+        {/* Logo */}
+        <Link href="/">
+          <Image src="/assets/icons/Logo.svg" alt="logo" width={123} height={70} />
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex gap-[40px] pr-[150px]" aria-label="Main navigation">
+          {navItems.map((item, index) => (
+            <div
+              key={index}
+              className="relative"
+              onMouseEnter={() => item.hasSubmenu && setIsHovered(true)}
+              onMouseLeave={() => item.hasSubmenu && setIsHovered(false)}
+            >
+              <Link
+                href={item.link}
+                className={`${
+                  item.active && "font-[600] border-b-[2px] border-b-[#fff]"
+                } block cursor-pointer m-[10px] text-[#fff]`}
               >
+                <span>{item.name}</span>
+              </Link>
+
+              {item.hasSubmenu && isHovered && (
+                <div className="absolute top-full left-0 bg-white shadow-lg py-2 px-2 rounded z-50 min-w-[200px]">
+                  {item.submenu?.map((subItem, subIndex) => (
+                    <Link
+                      key={subIndex}
+                      href={subItem.link}
+                      className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+         {mobileMenuOpen ? <CloseIcon fontSize="inherit" /> : <MenuIcon fontSize="inherit" />}
+        </button>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-[#1A94D5] shadow-md z-50 flex flex-col gap-2 p-4 md:hidden">
+            {navItems.map((item, index) => (
+              <div key={index} className="relative">
                 <Link
                   href={item.link}
                   className={`${
-                    item.active && "font-[600] border-b-[2px] border-b-[#fff]"
-                  } block cursor-pointer m-[10px] text-[#fff]`}
+                    item.active && "font-semibold underline"
+                  } block text-white py-2`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span className="cursor-pointer text-[#fff]">{item.name}</span>
+                  {item.name}
                 </Link>
-
-                {/* Submenu for Services */}
-                {item.hasSubmenu && isHovered && (
-                  <div className="absolute top-full right-[-50px] bg-white shadow-lg py-2 px-2 rounded z-50 min-w-[200px]">
+                {item.hasSubmenu && (
+                  <div className="pl-4 flex flex-col gap-1">
                     {item.submenu?.map((subItem, subIndex) => (
                       <Link
                         key={subIndex}
                         href={subItem.link}
-                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                        className="text-white text-sm py-1"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         {subItem.name}
                       </Link>
@@ -82,8 +124,8 @@ export const LandingPageHeader = () => {
                 )}
               </div>
             ))}
-          </nav>
-        </div>
+          </div>
+        )}
       </div>
     </header>
   );

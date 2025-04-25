@@ -26,14 +26,14 @@ const OurServices = () => {
   return (
     <div className="w-full bg-[#FFFFFF] section-gap">
       <div className="main-contain text-center">
-        <h1 className="text-[#252525] text-[48px] font-[600]">Our Services</h1>
-        <div className="grid grid-cols-2 pt-[80px] gap-[80px]">
+        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Our Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  pt-[40px] md:lg:pt-[80px] md:pt-[80px] pt-[40px] lg:lg:pt-[80px] md:pt-[80px] pt-[40px] lg:lg:gap-[80px] md:gap-[80px] gap-[40px] md:lg:gap-[80px] md:gap-[80px] gap-[40px] gap-[40px]">
           {data?.map((item, index) => (
             <div
               key={index}
               className="border-[#9CA3AF59] border-[5px] rounded-[10px] pt-[30px] pb-[20px]"
             >
-              <div className="w-[75%] m-auto">
+              <div className="lg:w-[75%] md:w-[75%] w-[95%] m-auto">
                 <div className="pb-[40px] flex justify-center">
                   <Image src={item?.icon} alt="icon" width={54} height={54} />
                 </div>

@@ -57,12 +57,12 @@ const ConsultingDetail = ({
               <div>
                 <h3 className="text-[18px] font-semibold">{tips}</h3>
                 <p className="text-[18px] pt-[10px]">{tipsDetail}</p>
-                <div className="pt-[50px]">
-                  <span className="text-[#5A84DF] font-semibold text-[18px]">
+                <div className="pt-[50px] flex">
+                  <Image src={'/assets/icons/email-icon.svg'} width={17} height={13} alt="email" />
+                  <span className="text-[#5A84DF] font-semibold pl-[10px] text-[18px]">
                     Contact us
                   </span>
                   <span className="text-[18px]">
-                    {" "}
                     today to schedule a consultation.
                   </span>
                 </div>

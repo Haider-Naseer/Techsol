@@ -31,7 +31,7 @@ const AboutUsPage = () => {
       <AboutUs  showButton={false} />
       <div className="w-full bg-[#FFFFFF] section-gap">
         <div className="main-contain text-center">
-          <div className="grid grid-cols-2 gap-[80px]">
+          <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-[80px] md:gap-[80px] gap-[40px]">
             <div>
               <Image
                 src={"/assets/icons/our-mission.svg"}
@@ -46,7 +46,7 @@ const AboutUsPage = () => {
                 <h2 className="text-[30px] font-[600] text-[#5A84DF]">
                   Our Mission
                 </h2>
-                <p className="text-[#868686] text-[18px] pt-[13px]">
+                <p className="text-[#868686] lg:text-[18px] md:text-[18px] text-[16px] pt-[13px]">
                   At TechSol, our mission is to empower businesses with
                   innovative technology solutions that drive efficiency, enhance
                   productivity, and enable sustainable growth. We strive to
@@ -61,13 +61,13 @@ const AboutUsPage = () => {
       </div>
       <div className="w-full bg-[#FFFFFF] section-gap">
         <div className="main-contain text-center relative">
-          <div className="grid grid-cols-2 gap-[50px]">
+          <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-[50px]">
             <div className="flex items-center">
               <div className="text-start">
                 <h2 className="text-[30px] font-[600] text-[#5A84DF]">
                   Our Vision
                 </h2>
-                <p className="text-[#868686] text-[18px] pt-[13px] pr-[150px]">
+                <p className="text-[#868686] lg:text-[18px] md:text-[18px] text-[16px] pt-[13px] lg:pr-[150px] md:pr-[150px]">
                   Our vision is to be a global leader in technology solutions,
                   recognized for our expertise in digital transformation, cloud
                   computing, AI-driven insights, and enterprise solutions. We
@@ -77,7 +77,7 @@ const AboutUsPage = () => {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="lg:mt-[0px] md:mt-[0px] mt-[15px]">
               <Image
                 src={"/assets/icons/our-vision.svg"}
                 className="m-auto"
@@ -102,8 +102,8 @@ const AboutUsPage = () => {
             <h2 className="text-[30px] font-[600] text-[#5A84DF]">
               Our Journey
             </h2>
-            <div className="pt-[50px] w-[80%] m-auto">
-              <p className="text-[#585858] text-[20px] text-start">
+            <div className="pt-[50px] lg:w-[80%] md:w-[80%] m-auto">
+              <p className="text-[#585858] lg:text-[20px] md:lg:text-[20px] text-[16px] text-start">
                 TechSol was founded with a vision to revolutionize the
                 technology landscape by providing cutting-edge solutions
                 tailored to modern business needs. From humble beginnings as a
@@ -126,7 +126,7 @@ const AboutUsPage = () => {
             <Image
               src={"/assets/icons/our-journey-bg.png"}
               alt="bg"
-              className="absolute top-[30%] right-[200px]"
+              className="absolute lg:block md:block hidden top-[30%] right-[200px]"
               width={176}
               height={176}
             />
@@ -136,8 +136,8 @@ const AboutUsPage = () => {
       <div className="w-full bg-[#FFFFFF] section-gap">
         <div className="main-contain text-center">
           <h2 className="text-[30px] font-[600] text-[#5A84DF]">Our Impact</h2>
-          <div className="pt-[50px] w-[80%] m-auto">
-            <p className="text-[#585858] text-[20px]">
+          <div className="pt-[50px] lg:w-[80%] md:w-[80%] m-auto">
+            <p className="text-[#585858] lg:text-[20px] md:text-[20px] text-[16px]">
               TechSol has consistently delivered high-quality technology
               solutions, making a significant impact on businesses across
               industries. Here’s how we have contributed to digital
@@ -155,7 +155,7 @@ const AboutUsPage = () => {
             width={176}
             height={176}
           />
-          <div className="pt-[80px] pb-[200px] text-center">
+          <div className="lg:pt-[80px] md:pt-[80px] pt-[40px] pb-[200px] text-center">
             <h2 className="text-[30px] font-[600] text-[#5A84DF]">
               Testimonials
             </h2>
@@ -191,7 +191,7 @@ const AboutUsPage = () => {
                       </span>
                     </p>
 
-                    <div className="grid grid-cols-2">
+                    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
                       <div className="mt-4 text-start">
                         <p className="text-[14px] font-[800]">{item?.name}</p>
                         <p className="text-[#505050] text-[10px]">

@@ -16,10 +16,10 @@ const OurHistory = () => {
   return (
     <div className="w-full bg-[#FFFFFF] section-gap">
       <div className="main-contain text-center">
-        <h1 className="text-[#252525] text-[48px] font-[600] pb-[50px]">Our History</h1>
-        <div className="grid grid-cols-2 text-start gap-[30px] px-[80px]">
+        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px] pb-[50px]">Our History</h1>
+        <div className="grid  md:grid-cols-2 lg;grid-cols-2 text-start gap-[30px] lg:px-[80px] md:px-[80px]">
           {data?.map((item, index) => (
-            <div key={index} className="bg-[#E6F3FB] p-[30px]">
+            <div key={index} className="bg-[#E6F3FB] lg:p-[30px] md:p-[30px] p-[20px]">
               <div>
                 <Image src={item?.icon} alt="icon" width={54} height={54} />
                 <h2 className="text-[#000000] text-[20px] pt-[15px] font-[600]">

@@ -68,14 +68,14 @@ const Services = () => {
             <div className="main-contain">
         <div className="section-gap">
           <div className="w-full text-center">
-            <h2 className="text-[#0F172A] text-[40px] font-[800]">
+            <h2 className="text-[#0F172A] lg:text-[40px] md:text-[40px] text-[30px] font-[800]">
               What Trade Risk is offering to our clients
             </h2>
           </div>
-          <div className="mt-[125px]">
-            <div className="grid grid-cols-2 gap-[50px] w-[60%] m-auto">
+          <div className="lg:mt-[125px] mb:mt-[125px] mt-[80px]">
+            <div className="lg:grid grid-cols-2 md:grid grid-cols-2 gap-[50px] lg:w-[60%] md:w-[60%] m-auto">
               {detail?.map((item, index) => (
-                <div className="text-center">
+                <div className="text-center mb-[20px]">
                   <div className="flex justify-center mb-[16px] min-h-[50px]">
                     <Image
                       src={item?.icon}

@@ -23,9 +23,9 @@ const OurProcess = () => {
   return (
     <div className="w-full bg-[#F1F5F9] pb-[80px] pt-[26px]">
       <div className="main-contain text-center">
-        <h1 className="text-[#252525] text-[48px] font-[600]">Our Process</h1>
-        <div className="flex pt-[80px] gap-[55px]">
-          <div className="w-[60%]">
+        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Our Process</h1>
+        <div className="flex flex-wrap lg:lg:pt-[80px] md:pt-[80px] pt-[40px] md:lg:pt-[80px] md:pt-[80px] pt-[40px] pt-[40px] gap-[55px]">
+          <div className="lg:w-[60%] md:w-[60%] w-full">
             <Image
               src={"/assets/icons/process-image.jpg"}
               alt="icon"
@@ -33,7 +33,7 @@ const OurProcess = () => {
               height={800}
             />
           </div>
-          <div className="text-start w-[45%]">
+          <div className="text-start lg:w-[35%] md:w-[35%] w-full">
             <ul>
               {detail?.map((item, index) => (
                 <li key={index} className="mb-[12px]">

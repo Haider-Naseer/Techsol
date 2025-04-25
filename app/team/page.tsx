@@ -5,7 +5,7 @@ const Team = () => {
     <>
       <div className="w-full bg-[#FFFFFF] section-gap">
         <div className="main-contain text-center">
-          <h1 className="text-[#252525] text-[48px] font-[600]">
+          <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">
             Meet our team members
           </h1>
           <div className="pt-[16px] text-[#5A5C62]">
@@ -16,7 +16,7 @@ const Team = () => {
             </h2>
           </div>
           <div>
-            <div className="flex pt-[99px] gap-[85px]">
+            <div className="lg:flex md:flex pt-[99px] gap-[85px]">
               <div className="min-w-[265px] bg-[#F8F8F8] h-full flex flex-col justify-between">
                 <div className="text-start flex flex-col flex-grow">
                   <div className="relative w-full h-[280px]">
@@ -40,8 +40,8 @@ const Team = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[80%] text-start">
-                <p className="text-[23px]">
+              <div className="lg:w-[80%] md:w-[80%] text-start">
+                <p className="lg:text-[23px] md:text-[23px] text-[18px] mt-[15px]">
                   <span className="text-[#82BED8]">Ayesha</span> is a seasoned
                   professional with a highly successful 16-year banking career
                   primarily focused on Branch Management, Priority Banking,
@@ -57,7 +57,7 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div className="flex pt-[99px] gap-[85px]">
+            <div className="lg:flex md:flex pt-[99px] gap-[85px]">
               <div className="min-w-[265px] bg-[#F8F8F8] h-full flex flex-col justify-between">
                 <div className="text-start flex flex-col flex-grow">
                   <div className="relative w-full h-[375px]">
@@ -81,8 +81,8 @@ const Team = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[80%] text-start">
-                <p className="text-[23px]">
+              <div className="lg:w-[80%] md:w-[80%] text-start">
+                <p className="lg:text-[23px] md:text-[23px] text-[18px] mt-[15px]">
                   <span className="text-[#82BED8]">Muhammad Ali Mirza</span> is
                   a seasoned financial expert with a proven track record in
                   banking, fintech, and supply chain finance. As the Chief
@@ -108,7 +108,7 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div className="flex pt-[99px] gap-[85px]">
+            <div className="lg:flex md:flex pt-[99px] gap-[85px]">
               <div className="min-w-[265px] bg-[#F8F8F8] h-full flex flex-col justify-between">
                 <div className="text-start flex flex-col flex-grow">
                   <div className="relative w-full h-[280px]">
@@ -132,8 +132,8 @@ const Team = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[75%] text-start">
-                <p className="text-[23px]">
+              <div className="lg:w-[75%] md:w-[75%] text-start">
+                <p className="lg:text-[23px] md:text-[23px] text-[18px] mt-[15px]">
                   A result driven professional with a vast banking experience of
                   over twenty years in Corporate and Commercial banking with
                   holding key position in Banks including Société Generale,

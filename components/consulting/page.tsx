@@ -7,38 +7,38 @@ const Consulting = () => {
     {
       title: "Advisory of Supply chain Financing",
       description: `Optimize your financial processes with our Supply Chain solutions for seamless efficiency.`,
-      icon: "/assets/icons/consulting-01.png",
+      icon: "/assets/icons/consulting-01.jpeg",
       link: "advisory-supply-chain",
     },
     {
       title: "Support and Maintenance of Digital Platforms",
       description: `Unlock financial excellence with our streamlined services for strategic growth.`,
-      icon: "/assets/icons/consulting-02.svg",
+      icon: "/assets/icons/consulting-02.jpeg",
       link: "digital-platform",
     },
     {
       title: "I.T Software Development Services",
       description: `Navigate the digital frontier with our cutting-edge Digital solutions for transformative success`,
-      icon: "/assets/icons/consulting-03.svg",
+      icon: "/assets/icons/consulting-03.jpeg",
       link: "development-services",
     },
   ];
   return (
-    <div className="w-full bg-[#F1F5F9] pt-[80px]">
+    <div className="w-full bg-[#F1F5F9] lg:pt-[80px] md:pt-[80px] pt-[40px]">
       <div className="main-contain text-center">
-        <h1 className="text-[#252525] text-[48px] font-[600]">Consulting</h1>
-        <div className="grid grid-cols-3 pt-[55px] gap-[130px]">
+        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Consulting</h1>
+        <div className="grid  md:grid-cols-3 lg:grid-cols-3 grid-cols-1 pt-[55px] gap-[50px] md:gap-[130px] lg:gap-[130px]">
           {data?.map((item, index) => (
             <Link href={item?.link}>
               <div
                 key={index}
                 className="bg-[#FFFFFF] h-full rounded-[8px] pt-[24px] pb-[36px]"
               >
-                <div className="w-[75%] m-auto">
+                <div className="lg:w-[75%] md:w-[75%] w-[85%] m-auto">
                   <div className="pb-[16px] flex justify-center">
                     <Image src={item?.icon} alt="icon" width={65} height={56} />
                   </div>
-                  <h2 className="text-[#4D4D4D] text-[24px] font-[700]">
+                  <h2 className="text-[#4D4D4D] lg:text-[24px] md:text-[24px] text-[18px] font-[700]">
                     {item?.title}
                   </h2>
                   <p className="text-[#717171] text-[14px] py-[10px]">

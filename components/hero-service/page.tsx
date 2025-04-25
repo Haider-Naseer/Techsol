@@ -22,12 +22,12 @@ const HeroService = ({
     <div className="bg-[#F1F5F9] w-full">
       <div className="main-contain">
         <div className="section-gap relative">
-          <div className="grid grid-cols-2 pt-[50px] w-full gap-[100px]">
+          <div className="lg:grid grid-cols-2 md:grid grid-cols-2 lg:pt-[50px] md:pt-[50px] w-full gap-[100px]">
             <div>
-              <h2 className="text-[#0F172A] text-[64px] pb-[23px] font-[800]">
+              <h2 className="text-[#0F172A] lg:text-[64px] md:text-[64px] text-[40px] pb-[23px] font-[800]">
                 {title}
               </h2>
-              <p className="text-[#0F172A] text-[24px] pb-[65px] font-[400]">
+              <p className="text-[#0F172A] lg:text-[24px] md:text-[24px] text-[20px] pb-[65px] font-[400]">
                 {des}
               </p>
               <CustomButton
@@ -38,7 +38,7 @@ const HeroService = ({
                 onClick={() => setShowDetail(!showDetail)}
               />
             </div>
-            <div>
+            <div className="mt-[25px] lg:mt-[0px] md:mt-[0px]">
               <Image src={image} alt="hero-section" width={654} height={440} />
             </div>
           </div>

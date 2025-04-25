@@ -6,8 +6,8 @@ const WayChooseUs = ({ whyUs }: { whyUs: string }) => {
   return (
     <div className="section-gap relative">
       <div className="main-contain">
-        <div className="flex mb-[80px] justify-center items-center text-center w-full">
-          <h2 className="text-[#0F172ACC] text-[40px] font-[800]">
+        <div className="flex lg:mb-[80px] md:mb-[80px] mb-[40px] justify-center items-center text-center w-full">
+          <h2 className="text-[#0F172ACC] lg:text-[40px] md:text-[40px] text-[30px] font-[800]">
             Why choose us?
           </h2>
           <Image
@@ -22,7 +22,7 @@ const WayChooseUs = ({ whyUs }: { whyUs: string }) => {
       <div className="bg-[#F1F5F9] w-full">
         <div className="main-contain">
           <div className="py-[55px] text-center justify-center w-[85%] m-auto">
-            <p className="text-[20px]">{whyUs}</p>
+            <p className="lg:text-[20px] md:text-[20px] text-[18px]">{whyUs}</p>
             <div className="w-full flex justify-center mt-[38px]">
               <Link href='/contact-us'>
               <button className="gap-[24px] bg-[#263F49] h-[60px] text-[#ffff] flex items-center transition-all whitespace-nowrap ease-in-out duration-300 relative border border-[2px] font-[600] text-[16px] px-[25px] py-[7.5px] text-center cursor-pointer rounded-[50px]">

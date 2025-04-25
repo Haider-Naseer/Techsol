@@ -7,8 +7,8 @@ export const AboutUs = ({showButton = true }:{showButton?: boolean}) => {
   return (
     <div className="w-full bg-[#FFFFFF] section-gap">
       <div className="main-contain text-center">
-        <h1 className="text-[#252525] text-[48px] font-[600]">About Us</h1>
-        <div className="grid grid-cols-2 pt-[80px] gap-[80px]">
+        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">About Us</h1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 lg:pt-[80px] md:pt-[80px] pt-[40px] lg:gap-[80px] md:gap-[80px] gap-[40px]">
           <div
             style={{
               backgroundImage: `url('/assets/icons/about-us-background.png')`,
@@ -25,7 +25,7 @@ export const AboutUs = ({showButton = true }:{showButton?: boolean}) => {
             />
           </div>
           <div className="text-start">
-            <h2 className="text-[30px] font-[600] text-[#252525]">
+            <h2 className="lg:text-[30px] md:text-[30px] text-[20px] font-[600] text-[#252525]">
               Global Consulting Excellence for Organizational Transformation
             </h2>
             <ul className="list-disc pl-5 text-[#545454] text-[16px] pt-[45px]">

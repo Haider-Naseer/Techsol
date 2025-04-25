@@ -40,3 +40,12 @@ body {
 .section-gap {
   padding: 80px 0px;
 }
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .section-gap {
+    padding: 40px 0px;
+  }
+  .main-contain {
+    padding: 0px 30px;
+  }
+}

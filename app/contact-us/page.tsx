@@ -24,7 +24,7 @@ const ContactUs = () => {
       <div className="main-contain">
         {" "}
         <div className="section-gap">
-          <div className="grid grid-cols-2 w-full gap-[60px]">
+          <div className="grid lg:grid-cols-2 md:grid-cols-2 w-full lg:gap-[60px] md:gap-[60px] gap-[40px]">
             <div>
               <Image
                 src={"/assets/icons/info-icon.svg"}
@@ -32,11 +32,11 @@ const ContactUs = () => {
                 width={77}
                 height={77}
               />
-              <h2 className="text-[48px] font-[600] pt-[20px]">
+              <h2 className="lg:text-[48px] md:text-[48px] text-[30px] font-[600] pt-[20px]">
                 Contact Information
               </h2>
               <p className="text-[#777777] text-[20px] pt-[20px]">
-                Lorem Ipsum is simply dummy text of the <br /> printing .
+                Lorem Ipsum is simply dummy text of the <span className="hidden md:inline"><br /></span> printing .
               </p>
             </div>
             <div>
@@ -48,9 +48,9 @@ const ContactUs = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-3 w-full gap-[100px] mt-[95px]">
+          <div className="grid lg:grid-cols-3 md:grid-cols-3 w-full lg:gap-[100px] md:gap-[100px] gap-[40px] lg:mt-[95px] md:mt-[95px] mt-[40px]">
             <div>
-              <div className="flex gap-[20px] min-h-[100px] border-r-[#C2C2C2] border-r-[1px] items-center">
+              <div className="flex gap-[20px] lg:min-h-[100px] md:min-h-[100px]  border-r-[#C2C2C2] lg:border-r-[1px] md:border-r-[1px] items-center">
                 <Image
                   src={"/assets/icons/email.svg"}
                   alt="map"
@@ -61,7 +61,7 @@ const ContactUs = () => {
               </div>
             </div>
             <div>
-              <div className="flex gap-[20px] min-h-[100px] border-r-[#C2C2C2] border-r-[1px] items-center">
+              <div className="flex gap-[20px] lg:min-h-[100px] md:min-h-[100px]  border-r-[#C2C2C2] lg:border-r-[1px] md:border-r-[1px] items-center">
                 <Image
                   src={"/assets/icons/phone.svg"}
                   alt="map"
@@ -73,7 +73,7 @@ const ContactUs = () => {
             </div>
             <div>
               {" "}
-              <div className="flex gap-[20px] min-h-[100px] items-center">
+              <div className="flex gap-[20px] lg:min-h-[100px] md:min-h-[100px]  items-center">
                 <Image
                   src={"/assets/icons/map-icon.svg"}
                   alt="map"
@@ -90,16 +90,16 @@ const ContactUs = () => {
       </div>
       <div className="main-contain bg-[#E6F3FB]">
         <div className="section-gap text-center">
-          <h1 className="text-[#252525] text-[48px] font-[600]">Contact Us</h1>
+          <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Contact Us</h1>
           <p className="text-[#4F4F4F] text-[14px] font-[500]">
             Consultancy provided for Risk planning, Trade finance and supply
             chain finance products. Worked on projects with Public & private{" "}
-            <br />
+            <span className="hidden md:inline"><br /></span>
             organisations on providing consultancy and product support.
           </p>
-          <div className="flex justify-center pt-[100px]">
-            <form onSubmit={handleSubmit(onSubmit)} className="w-[60%]">
-              <div className="grid grid-cols-2 gap-[27px]">
+          <div className="flex justify-center lg:pt-[100px] md:pt-[100px] pt-[50px]">
+            <form onSubmit={handleSubmit(onSubmit)} className="lg:w-[60%] md:w-[60%] w-full">
+              <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-[27px]">
                 <div>
                   <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
                     First Name{" "}
