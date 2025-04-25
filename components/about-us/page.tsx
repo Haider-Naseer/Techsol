@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import CustomButton from "../ui/button";
+import Link from "next/link";
 
-export const AboutUs = () => {
+export const AboutUs = ({showButton = true }:{showButton?: boolean}) => {
   return (
     <div className="w-full bg-[#FFFFFF] section-gap">
       <div className="main-contain text-center">
@@ -43,7 +44,9 @@ export const AboutUs = () => {
                 Development and Implementation Strategy
               </li>
             </ul>
+            {showButton &&             <Link href='/about-us'>
             <CustomButton label="About Us" variant="dark" className="px-[30px] py-[13px] mt-[50px]" />
+            </Link>}
           </div>
         </div>
       </div>

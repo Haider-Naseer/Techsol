@@ -10,7 +10,7 @@ const OurHistory = () => {
     {
       title: "Pakistan",
       description:"Worked on projects with Public & private organisations on providing consultancy and product support.",
-      icon: "/assets/icons/bahrain-icon.svg",
+      icon: "/assets/icons/pakistan-icon.svg",
     },
   ];
   return (
@@ -22,7 +22,7 @@ const OurHistory = () => {
             <div key={index} className="bg-[#E6F3FB] p-[30px]">
               <div>
                 <Image src={item?.icon} alt="icon" width={54} height={54} />
-                <h2 className="text-[#000000] text-[20px] font-[600]">
+                <h2 className="text-[#000000] text-[20px] pt-[15px] font-[600]">
                   {item?.title}
                 </h2>
                 <p className="text-[#606060] text-[16px] pt-[20px]">

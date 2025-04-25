@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const OurTeam = () => {
   const data = [
     {
@@ -16,7 +18,7 @@ const OurTeam = () => {
       name: "Zubair Baig",
       title: "Regional Head Products (MENAT)",
       description: "MBA(Finance) ",
-      icon: "/assets/icons/team-02.svg",
+      icon: "/assets/icons/team-03.svg",
     },
   ];
   return (
@@ -30,18 +32,23 @@ const OurTeam = () => {
           around the world <br /> Focus on what's most important to them.
         </h2>
         <div className="grid grid-cols-3 pt-[60px] gap-[140px]">
-        {data?.map((item, index) => (
+          {data?.map((item, index) => (
             <div
               key={index}
               className="bg-[#F8F8F8] h-full flex flex-col justify-between"
             >
-              <img
+              <div className="relative w-full h-[375px]">
+              <Image
                 src={item.icon}
                 alt={`${item.name}'s photo`}
-                className="w-full h-[300px] object-cover"
+                fill
+                className="object-cover"
               />
+              </div>
               <div className="text-start py-3 px-4 flex flex-col flex-grow">
-                <h3 className="text-[#19191B] text-[14px] font-[700]">{item.name}</h3>
+                <h3 className="text-[#19191B] text-[14px] font-[700]">
+                  {item.name}
+                </h3>
                 <p className="text-[#67B0D1] text-[12px] pt-1">{item.title}</p>
                 <span className="text-[#787A82] text-[12px] pt-3">
                   {item.description}

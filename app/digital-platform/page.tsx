@@ -10,8 +10,7 @@ const DigitalPlatform = () => {
   const title = "Support and Maintenance of Digital Platforms";
   const description =
     "Unlock financial excellence with our streamlined services for strategic growth.";
-  const detail =
-    "At Techsol , we understand that launching a digital platform is just the beginning. Ongoing support and maintenance are critical to ensuring consistent performance, user satisfaction, and long-term value. Our dedicated team provides end-to-end services to keep your digital platforms secure, up-to-date, and running smoothly.";
+  const detail = `At <span class="text-[#5A84DF] font-semibold">Techsol</span> , we understand that launching a digital platform is just the beginning. Ongoing support and maintenance are critical to ensuring consistent performance, user satisfaction, and long-term value. Our dedicated team provides end-to-end services to keep your digital platforms secure, up-to-date, and running smoothly.`;
   const image = "/assets/icons/digital-platforms.svg";
   const tips = "Let’s Keep Your Platform Future-Ready";
   const tipsDetail =

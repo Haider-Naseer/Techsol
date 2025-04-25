@@ -10,8 +10,7 @@ const AdvisorySupplyChain = () => {
   const title = "Advisory of Supply chain Financing";
   const description =
     "Optimize your financial processes with our Supply Chain solutions for seamless efficiency.";
-  const detail =
-    "At Techsol, we provide expert advisory services in Supply Chain Financing (SCF) to help businesses optimize working capital, strengthen supplier relationships, and ensure end-to-end financial stability. Our tailored strategies are designed to unlock liquidity within the supply chain and drive operational efficiency.";
+  const detail = `At <span class="text-[#5A84DF] font-semibold">Techsol</span>, we provide expert advisory services in Supply Chain Financing (SCF) to help businesses optimize working capital, strengthen supplier relationships, and ensure end-to-end financial stability. Our tailored strategies are designed to unlock liquidity within the supply chain and drive operational efficiency.`;
   const image = "/assets/icons/supply-chain.svg";
   const tips = "Let is Optimize Your Supply Chain";
   const tipsDetail =

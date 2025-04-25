@@ -183,14 +183,14 @@ const ContactUs = () => {
               </div>
 
               <div className="flex justify-end pt-[25px]">
-                <CustomButton
-                  label="Get in Touch"
-                  style={{
-                    border: "0px",
-                    borderRadius: "10px",
-                  }}
-                  className="h-[50px] px-[20px]"
-                />
+                  <CustomButton
+                    label="Get in Touch"
+                    style={{
+                      border: "0px",
+                      borderRadius: "10px",
+                    }}
+                    className="h-[50px] px-[20px]"
+                  />
               </div>
             </form>
           </div>

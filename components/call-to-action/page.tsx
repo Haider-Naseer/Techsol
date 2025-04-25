@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import CustomButton from "../ui/button";
+import Link from "next/link";
 
 export const CallToAction = () => {
   return (
@@ -16,11 +17,13 @@ export const CallToAction = () => {
               coffee (or tea!) and find out the best <br/> financial path to embark
               on.
             </p>{" "}
+            <Link href="/contact-us">
             <CustomButton
               label="Engage"
               variant="dark"
               className="px-[30px] py-[13px] mt-[50px]"
             />
+            </Link>
           </div>
           <div
             style={{

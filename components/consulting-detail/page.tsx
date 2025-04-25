@@ -8,7 +8,7 @@ const ConsultingDetail = ({
   image,
   tipsDetail,
   tips,
-  route
+  route,
 }: {
   list: Array<string>;
   title: string;
@@ -17,7 +17,7 @@ const ConsultingDetail = ({
   image: string;
   tipsDetail: string;
   tips: string;
-  route: string
+  route: string;
 }) => {
   return (
     <div className="main-contain relative">
@@ -28,7 +28,10 @@ const ConsultingDetail = ({
           <p className="pt-[30px] text-[#717171] text-[18px]">{description}</p>
           <div className="grid grid-cols-2 pt-[70px]">
             <div className="text-start">
-              <p className="text-[18px]">{detail}</p>
+              <p
+                className="text-[18px]"
+                dangerouslySetInnerHTML={{ __html: detail }}
+              ></p>
               <div className="py-[60px]">
                 <div className="flex items-center gap-[5px]">
                   <h3 className="text-[#0F172A] text-[24px] font-[600]">
@@ -78,7 +81,7 @@ const ConsultingDetail = ({
         height={175}
         className="absolute bottom-[50px] right-[50px]"
       />
-            <Image
+      <Image
         src={"/assets/icons/consulting-top-bg.png"}
         alt="bg"
         width={175}

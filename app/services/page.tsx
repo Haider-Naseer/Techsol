@@ -1,40 +1,38 @@
+'use client'
 import HeroService from "@/components/hero-service/page";
 import WayChooseUs from "@/components/way-choose-us/page";
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
 
 const Services = () => {
+  const [showDetail, setShowDetail] = useState(false);
+
   const detail = [
     {
       title: "Enhanced Global Network",
       describe:
         "Compare & secure deals from thousands of bank and Corporates worldwide",
       icon: "/assets/icons/website.svg",
-      link: "advisory-on-digitization",
     },
     {
       title: "Speeds Deals ",
       describe: "Slash processing times with automated workows.",
       icon: "/assets/icons/speed.svg",
-      link: "product-support",
     },
     {
       title: "Real-Time Visibility",
       describe: "Track progress & insights on one digital platform.",
       icon: "/assets/icons/eye.svg",
-      link: "resources-augmentation",
     },
     {
       title: "In-Depth Analytics",
       describe: "Gain unmatched risk pricing data for informaed decisions.",
       icon: "/assets/icons/chart.svg",
-      link: "advisory-on-digitization",
     },
     {
       title: "Artificial intelligence",
       describe: "A.I powered solutions.",
       icon: "/assets/icons/AI.svg",
-      link: "product-support",
     },
     {
       title: "Quick onboarding",
@@ -57,8 +55,17 @@ const Services = () => {
             Negotiate, Execute deals with corporates & banks.`;
   return (
     <>
-      <HeroService title={title} des={des} label={label} image={image} />
-      <div className="main-contain">
+      <HeroService
+        title={title}
+        des={des}
+        label={label}
+        image={image}
+        setShowDetail={setShowDetail}
+        showDetail={showDetail}
+      />
+      {showDetail && 
+      <>
+            <div className="main-contain">
         <div className="section-gap">
           <div className="w-full text-center">
             <h2 className="text-[#0F172A] text-[40px] font-[800]">
@@ -68,9 +75,8 @@ const Services = () => {
           <div className="mt-[125px]">
             <div className="grid grid-cols-2 gap-[50px] w-[60%] m-auto">
               {detail?.map((item, index) => (
-                <Link href={item?.link}>
                 <div className="text-center">
-                  <div className="flex justify-center mb-[16px]">
+                  <div className="flex justify-center mb-[16px] min-h-[50px]">
                     <Image
                       src={item?.icon}
                       alt={`icon ${index}`}
@@ -85,13 +91,14 @@ const Services = () => {
                     {item?.describe}
                   </p>
                 </div>
-                </Link>
               ))}
             </div>
           </div>
         </div>
       </div>
       <WayChooseUs whyUs={whyUs} />
+      </>
+      }
     </>
   );
 };

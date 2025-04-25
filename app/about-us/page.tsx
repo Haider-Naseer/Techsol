@@ -28,7 +28,7 @@ const AboutUsPage = () => {
 
   return (
     <>
-      <AboutUs />
+      <AboutUs  showButton={false} />
       <div className="w-full bg-[#FFFFFF] section-gap">
         <div className="main-contain text-center">
           <div className="grid grid-cols-2 gap-[80px]">
@@ -120,6 +120,13 @@ const AboutUsPage = () => {
               src={"/assets/icons/our-journey-bg.png"}
               alt="bg"
               className="absolute top-[0px] left-[2px]"
+              width={176}
+              height={176}
+            />
+            <Image
+              src={"/assets/icons/our-journey-bg.png"}
+              alt="bg"
+              className="absolute top-[30%] right-[200px]"
               width={176}
               height={176}
             />

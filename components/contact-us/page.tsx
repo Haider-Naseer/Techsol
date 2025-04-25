@@ -3,6 +3,8 @@ import CustomButton from "../ui/button";
 import { PhoneIcon } from "@/public/assets/svg/phone";
 import { EmailIcon } from "@/public/assets/svg/email";
 import { MapIcon } from "@/public/assets/svg/map";
+import Link from "next/link";
+
 
 export const ContactUs = () => {
   return (
@@ -51,11 +53,13 @@ export const ContactUs = () => {
               chain finance products. Worked on projects with Public & private
               organisations on providing consultancy and product support.
             </p>
+            <Link href={'/contact-us'} >
             <CustomButton
               label="Get in touch"
               variant="dark"
               className="px-[30px] py-[13px] mt-[50px]"
             />
+            </Link>
             </div>
           </div>
         </div>

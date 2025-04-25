@@ -1,8 +1,12 @@
+"use client";
+
 import HeroService from "@/components/hero-service/page";
 import ServiceDescription from "@/components/service-description/page";
 import WayChooseUs from "@/components/way-choose-us/page";
+import { useState } from "react";
 
 const ProductSupport = () => {
+  const [showDetail, setShowDetail] = useState(false);
   const title = "Product Support";
   const des = `Provide on site and off site teams for maintenance services`;
   const label = "Get Product support";
@@ -11,9 +15,20 @@ const ProductSupport = () => {
   const whyUs = `At Techsols, we combine deep industry expertise with innovative technology solutions to deliver real, measurable impact. Our client-centric approach ensures every solution is tailored to your unique business needs, driving efficiency, scalability, and growth. With a proven track record of successful digital transformations, we are trusted partners in navigating complex challenges and unlocking new opportunities. From strategic consultation to seamless implementation and ongoing support, we’re committed to excellence at every step. Choose Techsols for a partnership rooted in trust, innovation, and results.`;
   return (
     <>
-      <HeroService title={title} des={des} label={label} image={image} />
-      <ServiceDescription offering={offering} />
-      <WayChooseUs whyUs={whyUs} />
+      <HeroService
+        setShowDetail={setShowDetail}
+        showDetail={showDetail}
+        title={title}
+        des={des}
+        label={label}
+        image={image}
+      />
+      {showDetail && (
+        <>
+          <ServiceDescription offering={offering} />
+          <WayChooseUs whyUs={whyUs} />
+        </>
+      )}
     </>
   );
 };

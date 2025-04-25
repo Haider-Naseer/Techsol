@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Team = () => {
   return (
     <>
@@ -15,17 +17,27 @@ const Team = () => {
           </div>
           <div>
             <div className="flex pt-[99px] gap-[85px]">
-              <div className="w-[20%] bg-[#F8F8F8] h-full flex flex-col justify-between">
-                <div className="text-start py-3 px-4 flex flex-col flex-grow">
-                  <h3 className="text-[#19191B] text-[14px] font-[700]">
-                    Ayesha
-                  </h3>
-                  <p className="text-[#67B0D1] text-[12px] pt-1">
-                    Managing Director
-                  </p>
-                  <span className="text-[#787A82] text-[12px] pt-3">
-                    Team Manager
-                  </span>
+              <div className="min-w-[265px] bg-[#F8F8F8] h-full flex flex-col justify-between">
+                <div className="text-start flex flex-col flex-grow">
+                  <div className="relative w-full h-[280px]">
+                    <Image
+                      src="/assets/icons/team-01.svg"
+                      alt={`icon photo`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="px-4 py-3 pt-[10px]">
+                    <h3 className="text-[#19191B] text-[14px] font-[700]">
+                      Ayesha
+                    </h3>
+                    <p className="text-[#67B0D1] text-[12px] pt-1">
+                      Managing Director
+                    </p>
+                    <span className="text-[#787A82] text-[12px] pt-3">
+                      Team Manager
+                    </span>
+                  </div>
                 </div>
               </div>
               <div className="w-[80%] text-start">
@@ -46,17 +58,27 @@ const Team = () => {
               </div>
             </div>
             <div className="flex pt-[99px] gap-[85px]">
-              <div className="w-[20%] bg-[#F8F8F8] h-full flex flex-col justify-between">
-                <div className="text-start py-3 px-4 flex flex-col flex-grow">
-                  <h3 className="text-[#19191B] text-[14px] font-[700]">
-                    Muhammad Ali Mirza
-                  </h3>
-                  <p className="text-[#67B0D1] text-[12px] pt-1">
-                    Chief Commercial Officer
-                  </p>
-                  <span className="text-[#787A82] text-[12px] pt-3">
-                    MBA-(Fin), PMP (Project Management Professional)
-                  </span>
+              <div className="min-w-[265px] bg-[#F8F8F8] h-full flex flex-col justify-between">
+                <div className="text-start flex flex-col flex-grow">
+                  <div className="relative w-full h-[375px]">
+                    <Image
+                      src="/assets/icons/team-02.svg"
+                      alt={`icon photo`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="px-4 py-3 pt-[10px]">
+                    <h3 className="text-[#19191B] text-[14px] font-[700]">
+                      Muhammad Ali Mirza
+                    </h3>
+                    <p className="text-[#67B0D1] text-[12px] pt-1">
+                      Chief Commercial Officer
+                    </p>
+                    <span className="text-[#787A82] text-[12px] pt-3">
+                      MBA-(Fin), PMP (Project Management Professional)
+                    </span>
+                  </div>
                 </div>
               </div>
               <div className="w-[80%] text-start">
@@ -71,14 +93,14 @@ const Team = () => {
                   advisory, he plays a pivotal role in delivering innovative
                   financial solutions that empower businesses to optimize their
                   working capital and mitigate risks. He has worked several
-                  banks in <br /> With a distinguished career spanning 24 years,
+                  banks in  with a distinguished career spanning 24 years,
                   he has held key positions in leading banks like,   Citi Bank,
                   ABN AMRO Bank Alfalah and Dubai Islamic Bank, where he
                   specialized in trade finance, corporate banking, and
                   structured finance. His extensive experience in the banking
                   sector combined with his fintech expertise, enables him to
                   bridge the gap between traditional financial institutions and
-                  cutting-edge digital financing solutions. <br /> At Techsol,
+                  cutting-edge digital financing solutions. <br /> <br /> At Techsol,
                   Ali spearheads the development of the company’s proprietary
                   trade finance platform called “Trade Risk”, ensuring seamless
                   access to trade pricing solutions tailored to the needs of
@@ -87,17 +109,27 @@ const Team = () => {
               </div>
             </div>
             <div className="flex pt-[99px] gap-[85px]">
-              <div className="w-[25%] bg-[#F8F8F8] h-full flex flex-col justify-between">
-                <div className="text-start py-3 px-4 flex flex-col flex-grow">
-                  <h3 className="text-[#19191B] text-[14px] font-[700]">
-                    Zubair Baig
-                  </h3>
-                  <p className="text-[#67B0D1] text-[12px] pt-1">
-                    Regional Head Products (MENAT)
-                  </p>
-                  <span className="text-[#787A82] text-[12px] pt-3">
-                    MBA(Finance)
-                  </span>
+              <div className="min-w-[265px] bg-[#F8F8F8] h-full flex flex-col justify-between">
+                <div className="text-start flex flex-col flex-grow">
+                  <div className="relative w-full h-[280px]">
+                    <Image
+                      src="/assets/icons/team-03.svg"
+                      alt={`icon photo`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="px-4 py-3 pt-[10px]">
+                    <h3 className="text-[#19191B] text-[14px] font-[700]">
+                      Zubair Baig
+                    </h3>
+                    <p className="text-[#67B0D1] text-[12px] pt-1">
+                      Regional Head Products (MENAT)
+                    </p>
+                    <span className="text-[#787A82] text-[12px] pt-3">
+                      MBA(Finance)
+                    </span>
+                  </div>
                 </div>
               </div>
               <div className="w-[75%] text-start">

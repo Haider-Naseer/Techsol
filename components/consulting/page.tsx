@@ -7,7 +7,7 @@ const Consulting = () => {
     {
       title: "Advisory of Supply chain Financing",
       description: `Optimize your financial processes with our Supply Chain solutions for seamless efficiency.`,
-      icon: "/assets/icons/consulting-icon-01.png",
+      icon: "/assets/icons/consulting-01.png",
       link: "advisory-supply-chain",
     },
     {
@@ -32,7 +32,7 @@ const Consulting = () => {
             <Link href={item?.link}>
               <div
                 key={index}
-                className="bg-[#FFFFFF] rounded-[8px] pt-[24px] pb-[36px]"
+                className="bg-[#FFFFFF] h-full rounded-[8px] pt-[24px] pb-[36px]"
               >
                 <div className="w-[75%] m-auto">
                   <div className="pb-[16px] flex justify-center">
