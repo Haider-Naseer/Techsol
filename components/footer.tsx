@@ -3,9 +3,6 @@ import Image from "next/image";
 export const Footer = () => {
   const socialIcon = [
     { image: "/assets/icons/social-icon-01.svg" },
-    { image: "/assets/icons/social-icon-02.svg" },
-    { image: "/assets/icons/social-icon-03.svg" },
-    { image: "/assets/icons/social-icon-04.svg" },
   ];
 
   return (
@@ -74,9 +71,6 @@ export const Footer = () => {
             <div className="flex gap-[60px] lg:mt-[0px] md:mt-[0px] mt-[15px]">
               <span className="text-[#fff] font-[600] text-[16px]">
                 Privacy & Policy
-              </span>
-              <span className="text-[#fff] font-[600] text-[16px]">
-                Terms & Condition
               </span>
             </div>
           </div>

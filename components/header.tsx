@@ -10,26 +10,17 @@ export const LandingPageHeader = () => {
   const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(false); // NEW: for mobile submenu
 
-  const homePath = [
-    "/",
-    "/advisory-supply-chain",
-    "/digital-platform",
-  ];
-
-  const servicePath = [
-    "/services",
-    "/advisory-on-digitization",
-    "/product-support",
-    "/resources-augmentation",
-  ];
+  const homePath = ["/", "/advisory-supply-chain", "/digital-platform"];
+  const servicePath = ["/services", "/advisory-on-digitization", "/product-support", "/resources-augmentation"];
 
   const navItems = [
     { name: "Home", link: "/", active: homePath.includes(pathname) },
     { name: "About us", link: "/about-us", active: pathname === "/about-us" },
     {
       name: "Services",
-      link: "/services",
+      link: "",
       active: servicePath.includes(pathname),
       hasSubmenu: true,
       submenu: [
@@ -39,6 +30,7 @@ export const LandingPageHeader = () => {
       ],
     },
     { name: "Team", link: "/team", active: pathname === "/team" },
+    { name: "Trade Risk", color:'#5625f2', link: "/trade-risk", active: pathname === "/trade-risk" },
     { name: "Contact", link: "/contact-us", active: pathname === "/contact-us" },
   ];
 
@@ -47,11 +39,11 @@ export const LandingPageHeader = () => {
       <div className="main-contain flex justify-between items-center relative">
         {/* Logo */}
         <Link href="/">
-          <Image src="/assets/icons/Logo.svg" alt="logo" width={123} height={70} />
+          <Image src="/assets/icons/Logo.svg" alt="logo" width={220} height={100} />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-[40px] pr-[150px]" aria-label="Main navigation">
+        <nav className="hidden md:flex gap-[40px]" aria-label="Main navigation">
           {navItems.map((item, index) => (
             <div
               key={index}
@@ -59,15 +51,27 @@ export const LandingPageHeader = () => {
               onMouseEnter={() => item.hasSubmenu && setIsHovered(true)}
               onMouseLeave={() => item.hasSubmenu && setIsHovered(false)}
             >
-              <Link
-                href={item.link}
-                className={`${
-                  item.active && "font-[600] border-b-[2px] border-b-[#fff]"
-                } block cursor-pointer m-[10px] text-[#fff]`}
-              >
-                <span>{item.name}</span>
-              </Link>
+              {item.hasSubmenu ? (
+                <button
+                  type="button"
+                  className={`${
+                    item.active && "font-[600] border-b-[2px] border-b-[#fff]"
+                  } block cursor-pointer m-[10px] text-[#fff] bg-transparent`}
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <Link
+                  href={item.link}
+                  className={`${
+                    item.active && "font-[600] border-b-[2px] border-b-[#fff]"
+                  } block cursor-pointer m-[10px] text-[#fff]`}
+                >
+                  {item.name}
+                </Link>
+              )}
 
+              {/* Desktop submenu */}
               {item.hasSubmenu && isHovered && (
                 <div className="absolute top-full left-0 bg-white shadow-lg py-2 px-2 rounded z-50 min-w-[200px]">
                   {item.submenu?.map((subItem, subIndex) => (
@@ -91,7 +95,7 @@ export const LandingPageHeader = () => {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-         {mobileMenuOpen ? <CloseIcon fontSize="inherit" /> : <MenuIcon fontSize="inherit" />}
+          {mobileMenuOpen ? <CloseIcon fontSize="inherit" /> : <MenuIcon fontSize="inherit" />}
         </button>
 
         {/* Mobile Menu */}
@@ -99,28 +103,43 @@ export const LandingPageHeader = () => {
           <div className="absolute top-full left-0 w-full bg-[#1A94D5] shadow-md z-50 flex flex-col gap-2 p-4 md:hidden">
             {navItems.map((item, index) => (
               <div key={index} className="relative">
-                <Link
-                  href={item.link}
-                  className={`${
-                    item.active && "font-semibold underline"
-                  } block text-white py-2`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {item.hasSubmenu && (
-                  <div className="pl-4 flex flex-col gap-1">
-                    {item.submenu?.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        href={subItem.link}
-                        className="text-white text-sm py-1"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
+                {item.hasSubmenu ? (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)}
+                      className={`${
+                        item.active && "font-semibold underline"
+                      } block text-white py-2 w-full text-left`}
+                    >
+                      {item.name}
+                    </button>
+
+                    {mobileSubmenuOpen && (
+                      <div className="pl-4 flex flex-col gap-1">
+                        {item.submenu?.map((subItem, subIndex) => (
+                          <Link
+                            key={subIndex}
+                            href={subItem.link}
+                            className="text-white text-sm py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.link}
+                    className={`${
+                      item.active && "font-semibold underline"
+                    } block text-white py-2`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
                 )}
               </div>
             ))}

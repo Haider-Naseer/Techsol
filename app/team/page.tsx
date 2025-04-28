@@ -34,15 +34,12 @@ const Team = () => {
                     <p className="text-[#67B0D1] text-[12px] pt-1">
                       Managing Director
                     </p>
-                    <span className="text-[#787A82] text-[12px] pt-3">
-                      Team Manager
-                    </span>
                   </div>
                 </div>
               </div>
               <div className="lg:w-[80%] md:w-[80%] text-start">
                 <p className="lg:text-[23px] md:text-[23px] text-[18px] mt-[15px]">
-                  <span className="text-[#82BED8]">Ayesha</span> is a seasoned
+                  <span className="text-[#82BED8] font-[600]">Ayesha</span> is a seasoned
                   professional with a highly successful 16-year banking career
                   primarily focused on Branch Management, Priority Banking,
                   Compliance, and Wealth Management at Standard Chartered Bank
@@ -75,15 +72,12 @@ const Team = () => {
                     <p className="text-[#67B0D1] text-[12px] pt-1">
                       Chief Commercial Officer
                     </p>
-                    <span className="text-[#787A82] text-[12px] pt-3">
-                      MBA-(Fin), PMP (Project Management Professional)
-                    </span>
                   </div>
                 </div>
               </div>
               <div className="lg:w-[80%] md:w-[80%] text-start">
                 <p className="lg:text-[23px] md:text-[23px] text-[18px] mt-[15px]">
-                  <span className="text-[#82BED8]">Muhammad Ali Mirza</span> is
+                  <span className="text-[#82BED8] font-[600]"> Muhammad Ali Mirza</span> is
                   a seasoned financial expert with a proven track record in
                   banking, fintech, and supply chain finance. As the Chief
                   Commercial Officer at Techsol, he leads the company’s
@@ -126,9 +120,6 @@ const Team = () => {
                     <p className="text-[#67B0D1] text-[12px] pt-1">
                       Regional Head Products (MENAT)
                     </p>
-                    <span className="text-[#787A82] text-[12px] pt-3">
-                      MBA(Finance)
-                    </span>
                   </div>
                 </div>
               </div>

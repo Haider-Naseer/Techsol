@@ -5,19 +5,16 @@ const OurTeam = () => {
     {
       name: "Ayesha",
       title: "Managing Director ",
-      description: "Team Manager",
       icon: "/assets/icons/team-01.svg",
     },
     {
       name: "Muhammad Ali Mirza",
       title: "Chief Commercial Officer",
-      description: "MBA-(Fin), PMP (Project Management Professional)",
       icon: "/assets/icons/team-02.svg",
     },
     {
       name: "Zubair Baig",
       title: "Regional Head Products (MENAT)",
-      description: "MBA(Finance) ",
       icon: "/assets/icons/team-03.svg",
     },
   ];
@@ -54,9 +51,6 @@ const OurTeam = () => {
                   {item.name}
                 </h3>
                 <p className="text-[#67B0D1] text-[12px] pt-1">{item.title}</p>
-                <span className="text-[#787A82] text-[12px] pt-3">
-                  {item.description}
-                </span>
               </div>
             </div>
           ))}

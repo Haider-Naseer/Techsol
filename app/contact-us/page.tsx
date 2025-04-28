@@ -25,19 +25,10 @@ const ContactUs = () => {
         {" "}
         <div className="section-gap">
           <div className="grid lg:grid-cols-2 md:grid-cols-2 w-full lg:gap-[60px] md:gap-[60px] gap-[40px]">
-            <div>
-              <Image
-                src={"/assets/icons/info-icon.svg"}
-                alt="info"
-                width={77}
-                height={77}
-              />
+            <div className="flex items-center">
               <h2 className="lg:text-[48px] md:text-[48px] text-[30px] font-[600] pt-[20px]">
                 Contact Information
               </h2>
-              <p className="text-[#777777] text-[20px] pt-[20px]">
-                Lorem Ipsum is simply dummy text of the <span className="hidden md:inline"><br /></span> printing .
-              </p>
             </div>
             <div>
               <Image
