@@ -12,6 +12,7 @@ type PROPS = {
   variant?: "default" | "goBack" | "error" | "link" | 'outline'| 'dark'| 'transparent';
   showIcon?: boolean;
   style?: Object;
+  type?: "submit" | "reset" | "button" | undefined
 };
 
 const CustomButton = ({
@@ -24,6 +25,7 @@ const CustomButton = ({
   variant = "default",
   showIcon = true,
   style,
+  type ,
   ...rest
 }: PROPS) => {
   const variants = {
@@ -38,6 +40,7 @@ const CustomButton = ({
 
   return (
     <button
+    type={  type}
       className={`${
         variants[variant] || ""
       } flex items-center transition-all whitespace-nowrap ease-in-out duration-300 relative border border-[2px] font-[600] text-[16px] px-[20px] py-[7.5px] text-center cursor-pointer rounded-[50px] ${className}`}

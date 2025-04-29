@@ -5,6 +5,7 @@ import { LandingPageHeader } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
         <LandingPageHeader />
         {children}
+        <Toaster position="top-right" />
         <Footer />
       </body>
     </html>

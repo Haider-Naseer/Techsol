@@ -14,13 +14,16 @@
     "@hookform/resolvers": "^5.0.1",
     "@mui/icons-material": "^7.0.1",
     "@mui/material": "^7.0.1",
+    "lucide-react": "^0.503.0",
     "material": "^0.9.23",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.56.0",
     "react-slick": "^0.30.3",
+    "resend": "^4.4.1",
     "slick-carousel": "^1.8.1",
+    "sonner": "^2.0.3",
     "yup": "^1.6.1"
   },
   "devDependencies": {

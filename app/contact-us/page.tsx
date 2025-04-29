@@ -1,22 +1,38 @@
 "use client";
 import CustomButton from "@/components/ui/button";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Image from "next/image";
 import { contactUsSchema } from "@/validation/contact-us";
+import { sendEmail } from "../actions/sendEmail";
+import CustomToast from "@/components/ui/customToast";
+
 
 const ContactUs = () => {
+  interface contactUsForm {
+    firstName: string;
+    lastName: string;
+    email: string;
+    message: string;
+  }
+
   const {
     handleSubmit,
     register,
-    control, // Add control here
     formState: { errors },
-  } = useForm({
+    reset, // Get reset method
+  } = useForm<contactUsForm>({
     resolver: yupResolver(contactUsSchema),
   });
 
-  const onSubmit: SubmitHandler<any> = async (data: any) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<contactUsForm> = async (detail) => {
+    try {
+      await sendEmail(detail);
+      reset();
+      CustomToast.success("Message send successfully.")
+    } catch (error) {
+      CustomToast.error("Failed to send message")
+    }
   };
 
   return (
@@ -81,15 +97,22 @@ const ContactUs = () => {
       </div>
       <div className="main-contain bg-[#E6F3FB]">
         <div className="section-gap text-center">
-          <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Contact Us</h1>
+          <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">
+            Contact Us
+          </h1>
           <p className="text-[#4F4F4F] text-[14px] font-[500]">
             Consultancy provided for Risk planning, Trade finance and supply
             chain finance products. Worked on projects with Public & private{" "}
-            <span className="hidden md:inline"><br /></span>
+            <span className="hidden md:inline">
+              <br />
+            </span>
             organisations on providing consultancy and product support.
           </p>
           <div className="flex justify-center lg:pt-[100px] md:pt-[100px] pt-[50px]">
-            <form onSubmit={handleSubmit(onSubmit)} className="lg:w-[60%] md:w-[60%] w-full">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="lg:w-[60%] md:w-[60%] w-full"
+            >
               <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-[27px]">
                 <div>
                   <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
@@ -174,14 +197,15 @@ const ContactUs = () => {
               </div>
 
               <div className="flex justify-end pt-[25px]">
-                  <CustomButton
-                    label="Get in Touch"
-                    style={{
-                      border: "0px",
-                      borderRadius: "10px",
-                    }}
-                    className="h-[50px] px-[20px]"
-                  />
+                <CustomButton
+                  label="Get in Touch"
+                  type="submit"
+                  style={{
+                    border: "0px",
+                    borderRadius: "10px",
+                  }}
+                  className="h-[50px] px-[20px]"
+                />
               </div>
             </form>
           </div>
