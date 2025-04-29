@@ -1,22 +1,30 @@
-import Image from "next/image";
-import React from "react";
-import CustomButton from "../ui/button";
+"use client";
 import Link from "next/link";
+import CustomButton from "../ui/button";
 
 export const HeroSection = () => {
   return (
-    <div
-      className="py-[40px] lg:py-[0px] md:py-[0px] w-full bg-contain bg-no-repeat bg-center lg:h-[650px] md:h-[650px] lg:-mt-[141px] md:-mt-[141px] lg:pt-[200px] md:pt-[200px] lg:bg-[#E6F3FB] md:bg-[#E6F3FB] bg-[#1A94D5]"
-      style={{
-        backgroundImage: "url('/assets/icons/hero-section.png')",
-      }}
-    >
-      <div className="main-contain">
-        <div className="flex flex-wrap">
+      <div className="lg:h-[712px] md:h-[712px] relative h-screen overflow-hidden -mt-[170px] pt-[200px] lg:pt-[250px] md:pt-[250px]">
+            <div className="main-contain">
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/assets/videos/hero-section.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[#426a78] opacity-40 z-10"></div>
+        <div className="relative z-10 justify-start items-center h-full px-4">
           {" "}
           <div className="lg:w-[55%] md:w-[55%] w-full">
             <div>
-              <h1 className="text-[#fff] lg:text-[72px] md:text-[72px] text-[50px] font-[800] m-0">
+              <h1 className="text-[#fff] lg:text-[72px] md:text-[72px] text-[45px] font-[800] m-0">
                 We Believe in
               </h1>
               <h2 className="text-[#CBD5E1] lg:text-[48px] md:text-[48px] text-[30px] font-[600] m-0">
@@ -35,14 +43,6 @@ export const HeroSection = () => {
               />
               </Link>
             </div>
-          </div>
-          <div className="lg:w-[45%] md:w-[45%] w-full lg:-mr-[5px] md:-mr-[5px] mt-[30px]">
-            <Image
-              src="/assets/icons/hero-section-image.svg"
-              alt="logo"
-              width={625}
-              height={415}
-            />
           </div>
         </div>
       </div>

@@ -1,8 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Footer = () => {
   const socialIcon = [
-    { image: "/assets/icons/social-icon-01.svg" },
+    {
+      image: "/assets/icons/social-icon-01.svg",
+      link: "https://www.linkedin.com/company/techsol-management-consultants-wll/",
+    },
   ];
 
   return (
@@ -21,22 +25,24 @@ export const Footer = () => {
                     Bahrain.
                   </p>
                   <p className="pt-[15px] text-[#fff] text-[15px] font-[400]">
-                    Phone: +1 5589 55488 55
+                    Phone: +92 321 4011112
                   </p>
                   <p className="text-[#fff] text-[15px] font-[400]">
                     Email: info@techsol-bh.com
                   </p>
                 </div>
                 <div className="flex gap-[20px] mt-[20px] lg:pl-[30px] md:pl-[30px] pl-[0px]">
-                {socialIcon?.map((item, index) => (
-                  <Image
-                    key={index}
-                    src={item?.image}
-                    width={25}
-                    height={25}
-                    alt={`social-icon`}
-                  />
-                ))}
+                  {socialIcon?.map((item, index) => (
+                    <Link href={item?.link} target="_blank">
+                      <Image
+                        key={index}
+                        src={item?.image}
+                        width={25}
+                        height={25}
+                        alt={`social-icon`}
+                      />
+                    </Link>
+                  ))}
                 </div>
               </div>
               <div className="lg:pl-[80px] md:pl-[80px] pl-[0px] lg:my-[0px] md:my-[0px] my-[30px]">
@@ -69,9 +75,11 @@ export const Footer = () => {
               <span>©2022 Techsol. All rights reserved</span>
             </div>
             <div className="flex gap-[60px] lg:mt-[0px] md:mt-[0px] mt-[15px]">
-              <span className="text-[#fff] font-[600] text-[16px]">
-                Privacy & Policy
-              </span>
+              <Link href="/privacy-policy">
+                <span className="text-[#fff] font-[600] text-[16px]">
+                  Privacy & Policy
+                </span>
+              </Link>
             </div>
           </div>
         </div>

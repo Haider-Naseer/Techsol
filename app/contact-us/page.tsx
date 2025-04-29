@@ -59,7 +59,7 @@ const ContactUs = () => {
                   width={30}
                   height={30}
                 />
-                <span>+1 5589 55488 55 </span>
+                <span>+92 321 4011112</span>
               </div>
             </div>
             <div>

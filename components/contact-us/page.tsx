@@ -25,7 +25,7 @@ export const ContactUs = () => {
                 <ul>
                   <li className="flex gap-[22px] text-[#263F49] text-[16px]">
                     <PhoneIcon />
-                    <div>+1 5589 55488 55</div>
+                    <div>+92 321 4011112</div>
                   </li>
                   <li className="flex gap-[22px] text-[#263F49] text-[16px] pt-[30px]">
                     <EmailIcon />

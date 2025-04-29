@@ -47,7 +47,7 @@ const HeroService = ({
             alt="hero-section"
             width={290}
             height={85}
-            className="absolute top-1 right-1"
+            className="absolute top-1 right-1 lg:block md:block hidden"
           />
         </div>
       </div>

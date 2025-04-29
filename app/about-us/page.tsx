@@ -98,7 +98,7 @@ const AboutUsPage = () => {
       </div>
       <div className="w-full bg-[#FFFFFF]">
         <div className="main-contain relative">
-          <div className="section-gap text-center">
+          <div className="section-gap lg:text-center md:text-center">
             <h2 className="text-[30px] font-[600] text-[#5A84DF]">
               Our Journey
             </h2>
@@ -134,7 +134,7 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div className="w-full bg-[#FFFFFF] section-gap">
-        <div className="main-contain text-center">
+        <div className="main-contain lg:text-center md:text-center">
           <h2 className="text-[30px] font-[600] text-[#5A84DF]">Our Impact</h2>
           <div className="pt-[50px] lg:w-[80%] md:w-[80%] m-auto">
             <p className="text-[#585858] lg:text-[20px] md:text-[20px] text-[16px]">
