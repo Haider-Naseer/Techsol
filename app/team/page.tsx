@@ -19,7 +19,7 @@ const Team = () => {
             <div className="lg:flex md:flex pt-[99px] gap-[85px]">
               <div className="min-w-[265px] bg-[#F8F8F8] h-full flex flex-col justify-between">
                 <div className="text-start flex flex-col flex-grow">
-                  <div className="relative w-full h-[280px]">
+                  <div className="relative w-full lg:h-[280px] md:h-[280px] h-[355px]">
                     <Image
                       src="/assets/icons/team-01.svg"
                       alt={`icon photo`}
@@ -105,7 +105,7 @@ const Team = () => {
             <div className="lg:flex md:flex pt-[99px] gap-[85px]">
               <div className="min-w-[265px] bg-[#F8F8F8] h-full flex flex-col justify-between">
                 <div className="text-start flex flex-col flex-grow">
-                  <div className="relative w-full h-[280px]">
+                  <div className="relative w-full lg:h-[280px] md:h-[280px] h-[355px]">
                     <Image
                       src="/assets/icons/team-03.svg"
                       alt={`icon photo`}
