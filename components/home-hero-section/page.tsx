@@ -4,7 +4,7 @@ import CustomButton from "../ui/button";
 
 export const HeroSection = () => {
   return (
-      <div className="lg:h-[712px] md:h-[712px] relative h-screen overflow-hidden -mt-[170px] pt-[250px] lg:pt-[250px] md:pt-[250px]">
+      <div className="lg:h-[750px] md:h-[750px] relative h-screen overflow-hidden -mt-[170px] pt-[250px] lg:pt-[270px] md:pt-[270px]">
             <div className="main-contain">
         {/* Video Background */}
         <video

@@ -6,9 +6,12 @@ import Image from "next/image";
 import { contactUsSchema } from "@/validation/contact-us";
 import { sendEmail } from "../actions/sendEmail";
 import CustomToast from "@/components/ui/customToast";
+import { useState } from "react";
 
 
 const ContactUs = () => {
+
+  const [isLoading, setIsLoading] = useState(false)
   interface contactUsForm {
     firstName: string;
     lastName: string;
@@ -27,11 +30,14 @@ const ContactUs = () => {
 
   const onSubmit: SubmitHandler<contactUsForm> = async (detail) => {
     try {
+      setIsLoading(true)
       await sendEmail(detail);
       reset();
       CustomToast.success("Message send successfully.")
     } catch (error) {
       CustomToast.error("Failed to send message")
+    } finally{
+      setIsLoading(false)
     }
   };
 
@@ -204,6 +210,7 @@ const ContactUs = () => {
                     border: "0px",
                     borderRadius: "10px",
                   }}
+                  loading={isLoading}
                   className="h-[50px] px-[20px]"
                 />
               </div>
