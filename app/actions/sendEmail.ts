@@ -12,9 +12,9 @@ interface ContactUsForm {
 
 export async function sendEmail(data: ContactUsForm) {
   await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "haidernaseer340@gmail.com",
-    cc:"themodventures2023@gmail.com",
+    from: "noreply@watchbox.techsol-bh.com", // use your verified domain
+    to:"haidernaseer339@gmail.com",
+    cc:['themodventures2023@gmail.com', 'haidernaseer340@gmail.com'],
     subject: `New Contact Form Submission from ${data.firstName} ${data.lastName}`,
     html: `
       <div style="font-family: 'Arial', sans-serif; color: #333; padding: 20px; line-height: 1.6;">
