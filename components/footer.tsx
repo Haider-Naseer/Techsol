@@ -50,11 +50,18 @@ export const Footer = () => {
                   Useful Links
                 </h2>
                 <ul className="leading-[40px]">
-                  <li>Home</li>
-                  <li>About us</li>
-                  <li>Services</li>
-                  <li>Terms of service</li>
-                  <li>Privacy policy</li>
+                  <li>
+                    <a href="/"> Home</a>
+                  </li>
+                  <li>
+                    <a href="/about-us">About us</a>
+                  </li>
+                  <li>
+                    <a href="/team">Team</a>
+                  </li>
+                  <li>
+                    <a href="/contact-us">Contact us</a>
+                  </li>
                 </ul>
               </div>
               <div className="lg:pl-[80px] md:pl-[80px] pl-[0px]">
@@ -62,10 +69,22 @@ export const Footer = () => {
                   Our Services
                 </h2>
                 <ul className="leading-[40px]">
-                  <li>Trade Risk</li>
-                  <li>Advisory on digitization</li>
-                  <li>Product Support</li>
-                  <li>It Resource Augmentation</li>
+                  <li>
+                    <a href="/trade-risk">Trade Risk</a>
+                  </li>
+                  <li>
+                    <a href="/advisory-on-digitization">
+                      Advisory on digitization
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/product-support">Product Support</a>
+                  </li>
+                  <li>
+                    <a href="/resources-augmentation">
+                      It Resource Augmentation
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

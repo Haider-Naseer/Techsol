@@ -17,37 +17,73 @@ export async function sendEmail(data: ContactUsForm) {
     cc: ["m.ali@techsol-bh.com", "themodventures2023@gmail.com"],
     subject: `New Contact Form Submission from ${data.firstName} ${data.lastName}`,
     html: `
-      <div style="font-family: 'Arial', sans-serif; color: #333; padding: 20px; line-height: 1.6;">
-        <table style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-          <tr>
-            <td style="padding: 20px; background-color: #007bff; color: #fff; text-align: center; border-radius: 8px 8px 0 0;">
-              <h2 style="margin: 0; font-size: 24px;">New Contact Form Submission</h2>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding: 20px; background-color: #fff; border-radius: 0 0 8px 8px;">
-              <p style="font-size: 16px; color: #555;">You have received a new message from the contact form on your website. Here are the details:</p>
-              <table style="width: 100%; margin-top: 20px;">
-                <tr>
-                  <td style="padding: 8px; background-color: #f1f1f1; font-weight: bold;">Full Name</td>
-                  <td style="padding: 8px;">${data.firstName} ${data.lastName}</td>
-                </tr>
-                <tr>
-                  <td style="padding: 8px; background-color: #f1f1f1; font-weight: bold;">Email</td>
-                  <td style="padding: 8px;"><a href="mailto:${data.email}" style="color: #007bff;">${data.email}</a></td>
-                </tr>
-                <tr>
-                  <td style="padding: 8px; background-color: #f1f1f1; font-weight: bold;">Message</td>
-                  <td style="padding: 8px; background-color: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd;">
-                    <p>${data.message.replace(/\n/g, "<br>")}</p>
-                  </td>
-                </tr>
-              </table>
-              <hr style="border: 1px solid #eee; margin-top: 30px;" />
-              <p style="font-size: 12px; color: #888; text-align: center;">This message was sent from your website contact form.</p>
-            </td>
-          </tr>
-        </table>
+      <div 
+        style="border: 1px solid #eee; font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto;"
+      >
+        <h2 
+          style="margin-top: 0px; font-size: 20px; font-weight: bold; margin-bottom: 20px; border-bottom: 1px solid #eee; background-color: #F5F7F9; padding: 20px 20px;"
+        >
+          New Contact Form Submission
+        </h2>
+        
+        <div style="padding: 20px 0px 20px 0px;">
+          <p style="font-size: 16px; margin-bottom: 20px; text-align: center;">
+            Hi <strong>Admin</strong>,
+          </p>
+          
+          <p 
+            style="font-size: 16px; margin-bottom: 20px; text-align: center; padding: 0px 75px; line-height: 26px;"
+          >
+            You have received a new message from the contact form on your website techsol. Here are the details:
+          </p>
+          
+          <table style="width: 100%; border-collapse: collapse; background-color: #fafafa;">
+            <tr>
+              <td 
+                style="padding: 10px; font-weight: bold; border-bottom: 1px solid #ddd; width: 30%;"
+              >
+                Full Name
+              </td>
+              <td 
+                style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right; width: 70%;"
+              >
+                ${data.firstName} ${data.lastName}
+              </td>
+            </tr>
+            
+            <tr>
+              <td 
+                style="padding: 10px; font-weight: bold; border-bottom: 1px solid #ddd; width: 30%;"
+              >
+                Email
+              </td>
+              <td 
+                style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right; width: 70%;"
+              >
+                <a 
+                  href="mailto:${data.email}" 
+                  style="color: #333; text-decoration: none;"
+                >
+                  ${data.email}
+                </a>
+              </td>
+            </tr>
+            
+            <tr>
+              <td colspan="2" style="padding: 10px; font-weight: bold;">
+                Message
+              </td>
+            </tr>
+            
+            <tr>
+              <td colspan="2" 
+                style="padding: 10px; border-bottom: 1px solid #ddd; text-align: left;"
+              >
+                ${data.message}
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     `,
   });

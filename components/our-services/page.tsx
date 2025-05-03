@@ -1,48 +1,75 @@
 import Image from "next/image";
+import CustomButton from "../ui/button";
+import Link from "next/link";
 
 const OurServices = () => {
   const data = [
     {
       title: "Trade Risk",
       description: `"Techsols' platform digitizes trade finance, connecting banks and corporates to execute global deals seamlessly."`,
-      icon: "/assets/icons/service-01.svg",
+      icon: "/assets/icons/service-01.png",
+      link: "/trade-risk",
     },
     {
       title: "Advisory on digitization",
       description: `Digitization advisory: Embrace tech advancements for success`,
-      icon: "/assets/icons/service-02.svg",
+      icon: "/assets/icons/service-02.png",
+      link: "/advisory-on-digitization",
     },
     {
       title: "Product Support",
       description: `Provide on site and off site teams for maintenance services`,
-      icon: "/assets/icons/service-03.svg",
+      icon: "/assets/icons/service-03.png",
+      link: "/product-support",
     },
     {
       title: "It Resources Augmentation",
       description: `Enhancing operational efficiency and streamlining processes through our expert support solutions`,
-      icon: "/assets/icons/service-04.svg",
+      icon: "/assets/icons/service-04.png",
+      link: "/resources-augmentation",
     },
   ];
   return (
     <div className="w-full bg-[#FFFFFF] section-gap">
-      <div className="main-contain text-center">
-        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Our Services</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  pt-[40px] md:lg:pt-[80px] md:pt-[80px] pt-[40px] lg:lg:pt-[80px] md:pt-[80px] pt-[40px] lg:lg:gap-[80px] md:gap-[80px] gap-[40px] md:lg:gap-[80px] md:gap-[80px] gap-[40px] gap-[40px]">
+      <div className="max-w-[1440px] m-auto  text-center">
+        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">
+          Our Services
+        </h1>
+        <div className="pt-[40px] md:lg:pt-[80px] md:pt-[80px] pt-[40px] lg:lg:pt-[80px] md:pt-[80px] pt-[40px] lg:lg:gap-[80px] md:gap-[80px] gap-[40px] md:lg:gap-[80px] md:gap-[80px] gap-[40px] gap-[40px]">
           {data?.map((item, index) => (
             <div
               key={index}
-              className="border-[#9CA3AF59] border-[5px] rounded-[10px] pt-[30px] pb-[20px]"
+              className={`flex flex-col ${
+                index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+              } items-center text-left`}
             >
-              <div className="lg:w-[75%] md:w-[75%] w-[95%] m-auto">
-                <div className="pb-[40px] flex justify-center">
-                  <Image src={item?.icon} alt="icon" width={54} height={54} />
+              <div className="lg:w-[55%] md:w-[55%] w-full h-full flex items-center">
+                <div className="lg:w-[70%] md:w-[70%] w-full m-auto">
+                  <h2 className="text-[24px] text-[#1A94D5] pb-[20px]">
+                    Service
+                  </h2>
+                  <h3 className="text-[64px] text-[#263F49] pb-[20px] font-bold">
+                    {item?.title}
+                  </h3>
+                  <p className="text-[#606060] text-[32px]">
+                    {item?.description}
+                  </p>
+                  <Link href={item?.link}>
+                    <CustomButton
+                      label="learn more"
+                      variant="dark"
+                      className="py-[15px] mt-[30px]"
+                    />
+                  </Link>
                 </div>
-                <h2 className="text-[#262626] text-[18px] font-[600]">
-                  {item?.title}
-                </h2>
-                <p className="text-[#606060] text-[16px] pt-[20px]">
-                  {item?.description}
-                </p>
+              </div>
+              <div className="lg:w-[45%] md:w-[45%] w-full h-[615px] relative">
+                <Image
+                  src={item?.icon}
+                  alt={item?.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
             </div>
           ))}
