@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/home-hero-section/page";
 import OurHistory from "@/components/our-history/page";
 import OurProcess from "@/components/our-process/page";
 import OurServices from "@/components/our-services/page";
-import OurTeam from "@/components/our-team/page";
+import Testimonials from "@/components/testimonials/page";
 export default function Home() {
   return (
     <>
@@ -17,7 +17,7 @@ export default function Home() {
       <OurProcess />
       <OurHistory />
       <CallToAction />
-      <OurTeam />
+      <Testimonials />
       <ContactUs />
     </>
   );

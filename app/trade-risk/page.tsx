@@ -1,11 +1,10 @@
-'use client'
+"use client";
 import HeroService from "@/components/hero-service/page";
 import WayChooseUs from "@/components/way-choose-us/page";
 import Image from "next/image";
 import { useState } from "react";
 
 const Services = () => {
-  const [showDetail, setShowDetail] = useState(false);
 
   const detail = [
     {
@@ -60,45 +59,41 @@ const Services = () => {
         des={des}
         label={label}
         image={image}
-        setShowDetail={setShowDetail}
-        showDetail={showDetail}
       />
-      {showDetail && 
-      <>
-            <div className="main-contain">
-        <div className="section-gap">
-          <div className="w-full text-center">
-            <h2 className="text-[#0F172A] lg:text-[40px] md:text-[40px] text-[30px] font-[800]">
-              What Trade Risk is offering to our clients
-            </h2>
-          </div>
-          <div className="lg:mt-[125px] mb:mt-[125px] mt-[80px]">
-            <div className="lg:grid grid-cols-2 md:grid grid-cols-2 gap-[50px] lg:w-[60%] md:w-[60%] m-auto">
-              {detail?.map((item, index) => (
-                <div className="text-center mb-[20px]">
-                  <div className="flex justify-center mb-[16px] min-h-[50px]">
-                    <Image
-                      src={item?.icon}
-                      alt={`icon ${index}`}
-                      width={36}
-                      height={36}
-                    />
-                  </div>
-                  <h3 className="m-0 text-[#0F172A] text-[24px] font-[700]">
-                    {item?.title}
-                  </h3>
-                  <p className="text-[#0F172A] text-[18px] pt-[15px]">
-                    {item?.describe}
-                  </p>
+        <>
+          <div className="main-contain">
+            <div className="section-gap">
+              <div className="w-full text-center">
+                <h2 className="text-[#0F172A] lg:text-[40px] md:text-[40px] text-[30px] font-[800]">
+                  What Trade Risk is offering to our clients
+                </h2>
+              </div>
+              <div className="lg:mt-[125px] mb:mt-[125px] mt-[80px]">
+                <div className="lg:grid grid-cols-2 md:grid grid-cols-2 gap-[50px] lg:w-[60%] md:w-[60%] m-auto">
+                  {detail?.map((item, index) => (
+                    <div className="text-center mb-[20px]">
+                      <div className="flex justify-center mb-[16px] min-h-[50px]">
+                        <Image
+                          src={item?.icon}
+                          alt={`icon ${index}`}
+                          width={36}
+                          height={36}
+                        />
+                      </div>
+                      <h3 className="m-0 text-[#0F172A] text-[24px] font-[700]">
+                        {item?.title}
+                      </h3>
+                      <p className="text-[#0F172A] text-[18px] pt-[15px]">
+                        {item?.describe}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <WayChooseUs whyUs={whyUs} />
-      </>
-      }
+          <WayChooseUs whyUs={whyUs} />
+        </>
     </>
   );
 };

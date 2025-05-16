@@ -1,22 +1,18 @@
-import ArrowIcon from "@/public/assets/svg/arrow";
 import CustomButton from "../ui/button";
 import Image from "next/image";
-import DownArrowIcon from "@/public/assets/svg/downArrow";
+import Link from "next/link";
+import { WhitePhoneIcon } from "@/public/assets/svg/whitePhone";
 
 const HeroService = ({
   title,
   des,
   label,
   image,
-  setShowDetail,
-  showDetail,
 }: {
   title: string;
   des: string;
   label: string;
   image: string;
-  setShowDetail: React.Dispatch<React.SetStateAction<boolean>>;
-  showDetail: boolean;
 }) => {
   return (
     <div className="bg-[#F1F5F9] w-full">
@@ -30,13 +26,14 @@ const HeroService = ({
               <p className="text-[#0F172A] lg:text-[24px] md:text-[24px] text-[20px] pb-[65px] font-[400]">
                 {des}
               </p>
-              <CustomButton
-                icon={!showDetail ? <DownArrowIcon /> : <ArrowIcon />}
-                variant="dark"
-                label={label}
-                className="py-[10px]"
-                onClick={() => setShowDetail(!showDetail)}
-              />
+              <Link href={"/contact-us"}>
+                <CustomButton
+                  icon={<WhitePhoneIcon />}
+                  variant="dark"
+                  label={label}
+                  className="py-[10px]"
+                />
+              </Link>
             </div>
             <div className="mt-[25px] lg:mt-[0px] md:mt-[0px]">
               <Image src={image} alt="hero-section" width={654} height={440} />

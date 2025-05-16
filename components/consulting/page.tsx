@@ -24,7 +24,7 @@ const Consulting = () => {
     },
   ];
   return (
-    <div className="w-full bg-[#F1F5F9] lg:pt-[80px] md:pt-[80px] pt-[40px]">
+    <div className="w-full bg-[#fff] lg:pt-[80px] md:pt-[80px] pt-[40px]">
       <div className="main-contain text-center">
         <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Consulting</h1>
         <div className="grid  md:grid-cols-3 lg:grid-cols-3 grid-cols-1 pt-[55px] gap-[50px] md:gap-[130px] lg:gap-[130px]">

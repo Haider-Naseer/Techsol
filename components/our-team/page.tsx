@@ -19,7 +19,7 @@ const OurTeam = () => {
     },
   ];
   return (
-    <div className="w-full bg-[#fff] section-gap">
+    <div className="w-full bg-[#F1F5F9] section-gap">
       <div className="main-contain text-center">
         <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] lg:text-[35px] md:text-[35px] text-[25px] ">
           Meet our team members

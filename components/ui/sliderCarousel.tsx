@@ -39,7 +39,7 @@ function PrevArrow(props: any) {
 
 export const SliderCarousel = ({
   children,
-  slidesToShow = 2,
+  slidesToShow = 3,
 }: {
   children: React.ReactNode;
   slidesToShow?: number;

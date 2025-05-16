@@ -3,10 +3,8 @@
 import HeroService from "@/components/hero-service/page";
 import ServiceDescription from "@/components/service-description/page";
 import WayChooseUs from "@/components/way-choose-us/page";
-import { useState } from "react";
 
 const ProductSupport = () => {
-  const [showDetail, setShowDetail] = useState(false);
   const title = "Product Support";
   const des = `Provide on site and off site teams for maintenance services`;
   const label = "Get Product support";
@@ -16,19 +14,15 @@ const ProductSupport = () => {
   return (
     <>
       <HeroService
-        setShowDetail={setShowDetail}
-        showDetail={showDetail}
         title={title}
         des={des}
         label={label}
         image={image}
       />
-      {showDetail && (
         <>
           <ServiceDescription offering={offering} />
           <WayChooseUs whyUs={whyUs} />
         </>
-      )}
     </>
   );
 };

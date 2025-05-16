@@ -43,9 +43,9 @@ const OurServices = () => {
                 index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
               } items-center text-left`}
             >
-              <div className="lg:w-[55%] md:w-[55%] py-[40px] px-[40px] lg:px-[0px] md:px-[0px] w-full h-full flex items-center">
-                <div className="lg:w-[70%] md:w-[70%] w-full m-auto">
-                  <h2 className="text-[24px] text-[#1A94D5] pb-[20px]">
+              <div className="lg:w-[47%] md:w-[47%] py-[40px] px-[40px] lg:px-[0px] md:px-[0px] w-full h-full flex items-center">
+                <div className="lg:w-[60%] md:w-[70%] w-full m-auto">
+                  <h2 className="text-[24px] text-[#1A94D5] font-semibold pb-[10px]">
                     Service
                   </h2>
                   <h3 className="lg:text-[64px] md:text-[64px] text-[50px] text-[#263F49] pb-[20px] font-bold">
@@ -63,7 +63,7 @@ const OurServices = () => {
                   </Link>
                 </div>
               </div>
-              <div className="lg:w-[45%] md:w-[45%] w-full h-[615px] relative">
+              <div className="lg:w-[53%] md:w-[53%] w-full h-[615px] relative">
                 <Image
                   src={item?.icon}
                   alt={item?.title}

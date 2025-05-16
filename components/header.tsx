@@ -18,6 +18,7 @@ export const LandingPageHeader = () => {
     "/advisory-on-digitization",
     "/product-support",
     "/resources-augmentation",
+    '/trade-risk'
   ];
 
   const navItems = [
@@ -29,18 +30,13 @@ export const LandingPageHeader = () => {
       active: servicePath.includes(pathname),
       hasSubmenu: true,
       submenu: [
+        { name: "Trade Risk", link: "/trade-risk" },
         { name: "Advisory on Digitization", link: "/advisory-on-digitization" },
         { name: "Product Support", link: "/product-support" },
         { name: "Resource Augmentation", link: "/resources-augmentation" },
       ],
     },
     { name: "Team", link: "/team", active: pathname === "/team" },
-    {
-      name: "Trade Risk",
-      color: "#5625f2",
-      link: "/trade-risk",
-      active: pathname === "/trade-risk",
-    },
     {
       name: "Contact",
       link: "/contact-us",
@@ -98,12 +94,12 @@ export const LandingPageHeader = () => {
 
               {/* Desktop submenu */}
               {item.hasSubmenu && isHovered && (
-                <div className="absolute top-full left-0 bg-white shadow-lg py-2 px-2 rounded z-50 min-w-[200px]">
+                <div className="absolute top-full left-[-45px] bg-white shadow-lg py-2 px-2 rounded z-50 min-w-[200px]">
                   {item.submenu?.map((subItem, subIndex) => (
                     <Link
                       key={subIndex}
                       href={subItem.link}
-                      className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                      className="block text-center px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
                     >
                       {subItem.name}
                     </Link>

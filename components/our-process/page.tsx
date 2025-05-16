@@ -21,7 +21,7 @@ const OurProcess = () => {
     },
   ];
   return (
-    <div className="w-full bg-[#F1F5F9] pb-[80px] pt-[26px]">
+    <div className="w-full bg-[#F1F5F9] pt-[26px] section-gap">
       <div className="main-contain text-center">
         <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Our Process</h1>
         <div className="flex flex-wrap lg:lg:pt-[80px] md:pt-[80px] pt-[40px] md:lg:pt-[80px] md:pt-[80px] pt-[40px] pt-[40px] gap-[55px]">

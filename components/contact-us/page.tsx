@@ -56,9 +56,7 @@ export const ContactUs = () => {
                 Contact Us
               </h2>
               <p className="lg:text-[24px] md:text-[24px] text-[18px]">
-                Consultancy provided for Risk planning, Trade finance and supply
-                chain finance products. Worked on projects with Public & private
-                organisations on providing consultancy and product support.
+              Contact us to consult you better
               </p>
               <Link href={"/contact-us"}>
                 <CustomButton

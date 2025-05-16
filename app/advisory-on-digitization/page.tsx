@@ -2,10 +2,8 @@
 import HeroService from "@/components/hero-service/page";
 import ServiceDescription from "@/components/service-description/page";
 import WayChooseUs from "@/components/way-choose-us/page";
-import { useState } from "react";
 
 const AdvisoryOnDigitization = () => {
-  const [showDetail, setShowDetail] = useState(false);
 
   const title = "Advisory on Digitization";
   const des = `Transforming businesses with innovative digital solutions.`;
@@ -29,20 +27,15 @@ const AdvisoryOnDigitization = () => {
   return (
     <>
       <HeroService
-        setShowDetail={setShowDetail}
-        showDetail={showDetail}
         title={title}
         des={des}
         label={label}
         image={image}
       />
-      {showDetail && (
         <>
-          {" "}
           <ServiceDescription offering={offering} />
           <WayChooseUs whyUs={whyUs} />
         </>
-      )}
     </>
   );
 };
