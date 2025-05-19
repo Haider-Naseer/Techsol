@@ -28,7 +28,7 @@ const HeroService = ({
               </p>
               <Link href={"/contact-us"}>
                 <CustomButton
-                  icon={<WhitePhoneIcon />}
+                  postIcon={<WhitePhoneIcon />}
                   variant="dark"
                   label={label}
                   className="py-[10px]"

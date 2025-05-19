@@ -18,7 +18,6 @@ export const LandingPageHeader = () => {
     "/advisory-on-digitization",
     "/product-support",
     "/resources-augmentation",
-    '/trade-risk'
   ];
 
   const navItems = [
@@ -32,11 +31,11 @@ export const LandingPageHeader = () => {
       submenu: [
         { name: "Trade Risk", link: "/trade-risk" },
         { name: "Advisory on Digitization", link: "/advisory-on-digitization" },
-        { name: "Product Support", link: "/product-support" },
+        { name: "SCF Product Support", link: "/product-support" },
         { name: "Resource Augmentation", link: "/resources-augmentation" },
       ],
     },
-    { name: "Team", link: "/team", active: pathname === "/team" },
+    { name: "Trade Risk", link: "/trade-risk", active: pathname === "/trade-risk" },
     {
       name: "Contact",
       link: "/contact-us",

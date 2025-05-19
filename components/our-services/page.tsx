@@ -48,7 +48,7 @@ const OurServices = () => {
                   <h2 className="text-[24px] text-[#1A94D5] font-semibold pb-[10px]">
                     Service
                   </h2>
-                  <h3 className="lg:text-[64px] md:text-[64px] text-[50px] text-[#263F49] pb-[20px] font-bold">
+                  <h3 className="lg:text-[64px] md:text-[64px] text-[40px] text-[#263F49] pb-[20px] font-bold">
                     {item?.title}
                   </h3>
                   <p className="text-[#606060] lg:text-[32px] md:text-[32px] text-[25px]">

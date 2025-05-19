@@ -4,28 +4,37 @@ type PROPS = {
   label: string;
   className?: string;
   icon?: React.ReactNode;
+  postIcon?: React.ReactNode;
   onClick?: () => void;
   loading?: boolean;
   size?: "small" | "large";
   [props: string]: any;
   disabled?: boolean;
-  variant?: "default" | "goBack" | "error" | "link" | 'outline'| 'dark'| 'transparent';
+  variant?:
+    | "default"
+    | "goBack"
+    | "error"
+    | "link"
+    | "outline"
+    | "dark"
+    | "transparent";
   showIcon?: boolean;
   style?: Object;
-  type?: "submit" | "reset" | "button" | undefined
+  type?: "submit" | "reset" | "button" | undefined;
 };
 
 const CustomButton = ({
   label,
   className = "",
   icon,
+  postIcon,
   onClick,
   loading = false,
   disabled = false,
   variant = "default",
   showIcon = true,
   style,
-  type ,
+  type,
   ...rest
 }: PROPS) => {
   const variants = {
@@ -35,12 +44,12 @@ const CustomButton = ({
     error: `bg-[#ec4949] text-[#fff]`,
     outline: "bg-[#fff] text-[#225CC5]",
     dark: "bg-[#263F49] text-[#ffff]",
-    transparent:"bg-[transparent] text-[#ffff]"
+    transparent: "bg-[transparent] text-[#ffff]",
   };
 
   return (
     <button
-    type={  type}
+      type={type}
       className={`${
         variants[variant] || ""
       } flex items-center transition-all whitespace-nowrap ease-in-out duration-300 relative border border-[2px] font-[600] text-[16px] px-[20px] py-[7.5px] text-center cursor-pointer rounded-[50px] ${className}`}
@@ -49,6 +58,12 @@ const CustomButton = ({
       disabled={loading || disabled}
       style={style}
     >
+      {showIcon && (
+        <span className="mr-[10px]">
+          {loading ? <CircularProgress size={15} color="inherit" /> : postIcon}
+        </span>
+      )}
+
       {label}
       {showIcon && (
         <span className="ml-[10px]">

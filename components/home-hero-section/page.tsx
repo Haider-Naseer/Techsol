@@ -4,9 +4,8 @@ import CustomButton from "../ui/button";
 
 export const HeroSection = () => {
   return (
-      <div className="h-screen min-h-[600px] max-h-[1000px] relative h-screen overflow-hidden -mt-[170px] pt-[250px] lg:pt-[270px] md:pt-[270px]">
-            <div className="main-contain">
-        {/* Video Background */}
+    <div className="max-h-[1100px] relative h-[104.5vh] overflow-hidden -mt-[170px] pt-[250px] lg:pt-[270px] md:pt-[270px]">
+      <div className="main-contain">
         <video
           autoPlay
           muted
@@ -36,11 +35,11 @@ export const HeroSection = () => {
             </div>
             <div className="lg:pt-[58px] md:pt-[58px] pt-[30px] flex gap-[20px]">
               <Link href={"/contact-us"}>
-              <CustomButton
-                variant="transparent"
-                label="Get Started"
-                className="px-[50px] py-[13px]"
-              />
+                <CustomButton
+                  variant="transparent"
+                  label="Get Started"
+                  className="px-[50px] py-[13px]"
+                />
               </Link>
             </div>
           </div>

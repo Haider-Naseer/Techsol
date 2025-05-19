@@ -8,7 +8,7 @@ function NextArrow(props: any) {
   return (
     <IconButton
       onClick={onClick}
-      className="!absolute top-1/2 right-[-50px] z-10 transform -translate-y-1/2 bg-gray-100"
+      className="!absolute top-1/2 lg:right-[-50px] md:right-[-50px] right-[-30px] z-10 transform -translate-y-1/2 bg-gray-100"
     >
       <Image
         src={"/assets/icons/slider_left_arrow.svg"}
@@ -25,7 +25,7 @@ function PrevArrow(props: any) {
   return (
     <IconButton
       onClick={onClick}
-      className="!absolute top-1/2 left-[-50px] z-10 transform -translate-y-1/2 bg-gray-100"
+      className="!absolute top-1/2 lg:left-[-50px] md:left-[-50px] left-[-30px] z-10 transform -translate-y-1/2 bg-gray-100"
     >
       <Image
         src={"/assets/icons/slider_right_arrow.svg"}

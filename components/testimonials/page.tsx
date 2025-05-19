@@ -42,7 +42,7 @@ const Testimonials = () => {
                 {detail?.map((item, index) => (
                   <div
                     key={index}
-                    className="max-w-[90%] min-h-[400px] my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.05),_2px_2px_6px_rgba(0,0,0,0.1)] p-6 relative"
+                    className="relative max-w-[90%] min-h-[400px] my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.05),_2px_2px_6px_rgba(0,0,0,0.1)] p-6"
                   >
                     <div className="absolute -top-6 left-4 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center shadow-md">
                       <Image
@@ -69,10 +69,12 @@ const Testimonials = () => {
                       </span>
                     </p>
 
-                    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
-                      <div className="mt-4 text-start">
-                        <img src={item?.image} alt="testimonials" />
-                      </div>
+                    <div className="absolute bottom-4 left-4">
+                      <img
+                        src={item?.image}
+                        alt="testimonials"
+                        className="w-full h-full"
+                      />
                     </div>
                   </div>
                 ))}
