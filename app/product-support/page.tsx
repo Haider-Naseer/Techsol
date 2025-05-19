@@ -12,14 +12,10 @@ const ProductSupport = () => {
   const detail = [
     {
       describe: `Develop Strategy and SCF product programs tailored for different business segments and sectors they do business in, and additionally implementing the right SoF digital platform to meet their strategic business model and products.`,
-      department: `International Business Development Director / Senior Business Consultant, Receivables & SCF solutions`,
-      image: "/assets/icons/testimonials-01.png",
-    },
+name: 'For Financial Institutions (FI):',    },
     {
       describe: `Creating MultiFinder SC programs for a single large corporates to cater to their SC business model that would cater to its suppliers on a single MultiFinder SCF platform that best suits them. Techsol follows a comprehensive approach to developing supply chain finance (SCF) products.`,
-      name: "George Koukis",
-      department: `International Business Development Director / Senior Business Consultant, Receivables & SCF solutions`,
-      image: "/assets/icons/testimonials-02.png",
+      name: "For Corporates:",
     },
   ];
 
@@ -57,15 +53,15 @@ const ProductSupport = () => {
               />
 
               <div className="pb-[40px] text-center">
-                <div className="pt-[110px] flex gap-[16px]">
+                <div className="pt-[110px] flex flex-wrap gap-[16px]">
                   {detail?.map((item, index) => (
                     <div
                       key={index}
-                      className="relative w-[50%] my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.15),_-2px_4px_8px_rgba(0,0,0,0.1),_2px_4px_8px_rgba(0,0,0,0.1)] p-6"
+                      className="relative lg:w-[50%] md:w-[50%] w-full my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.15),_-2px_4px_8px_rgba(0,0,0,0.1),_2px_4px_8px_rgba(0,0,0,0.1)] p-6"
 
                     >
                       <ul className="list-disc pl-5 ">
-                        <li className="text-[#1A94D5] font-bold text-[30px] mb-[20px]">For Financial Institutions (FI):</li>
+                        <li className="text-[#1A94D5] font-bold lg:text-[30px] md:text-[30px] text-[25px] mb-[20px]">{item?.name}</li>
                       </ul>
                       <p className="text-gray-700 text-[20px] leading-relaxed mb-4">
                         {item?.describe}
