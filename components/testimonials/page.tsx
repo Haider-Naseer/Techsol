@@ -26,19 +26,12 @@ const Testimonials = () => {
     <>
       <div className="w-full bg-[#FFFFFF]">
         <div className="main-contain relative">
-          <Image
-            src={"/assets/icons/testimonials-bg.png"}
-            alt="bg"
-            className="absolute bottom-[10px] right-[10px]"
-            width={176}
-            height={176}
-          />
-          <div className="lg:pt-[80px] md:pt-[80px] pt-[40px] pb-[200px] text-center">
+          <div className="section-gap text-center">
             <h2 className="text-[30px] font-[600] text-[#5A84DF]">
               Testimonials
             </h2>
             <div className="pt-[110px]">
-              <SliderCarousel>
+              <SliderCarousel autoPlay={false} showArrow={false}>
                 {detail?.map((item, index) => (
                   <div
                     key={index}

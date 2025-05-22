@@ -1,5 +1,4 @@
 import { AboutUs } from "@/components/about-us/page";
-import { CallToAction } from "@/components/call-to-action/page";
 import Consulting from "@/components/consulting/page";
 import { ContactUs } from "@/components/contact-us/page";
 import { HeroSection } from "@/components/home-hero-section/page";
@@ -16,7 +15,6 @@ export default function Home() {
       <Consulting />
       <OurProcess />
       <OurHistory />
-      <CallToAction />
       <Testimonials />
       <ContactUs />
     </>

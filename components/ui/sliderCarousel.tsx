@@ -40,20 +40,25 @@ function PrevArrow(props: any) {
 export const SliderCarousel = ({
   children,
   slidesToShow = 3,
+  autoPlay = true,
+  showArrow = true
 }: {
   children: React.ReactNode;
   slidesToShow?: number;
+  autoPlay?: boolean
+  showArrow?: boolean
 }) => {
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: autoPlay,
     autoplaySpeed: 5000,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: showArrow && <NextArrow />,
+    prevArrow: showArrow && <PrevArrow />,
     responsive: [
       {
         breakpoint: 768,

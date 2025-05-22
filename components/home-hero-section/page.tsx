@@ -23,7 +23,7 @@ export const HeroSection = () => {
           {" "}
           <div className="lg:w-[55%] md:w-[55%] w-full">
             <div>
-              <h1 className="text-[#fff] lg:text-[72px] md:text-[72px] text-[45px] font-[800] m-0">
+              <h1 className="text-[#fff] lg:text-[72px] md:text-[72px] text-[40px] font-[800] m-0">
                 We Believe in
               </h1>
               <h2 className="text-[#CBD5E1] lg:text-[48px] md:text-[48px] text-[30px] font-[600] m-0">

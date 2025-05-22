@@ -43,27 +43,27 @@ const OurServices = () => {
                 index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
               } items-center text-left`}
             >
-              <div className="lg:w-[47%] md:w-[47%] py-[40px] px-[40px] lg:px-[0px] md:px-[0px] w-full h-full flex items-center">
+              <div className="lg:w-[50%] md:w-[50%] py-[40px] px-[40px] lg:px-[0px] md:px-[0px] w-full h-full flex items-center">
                 <div className="lg:w-[60%] md:w-[70%] w-full m-auto">
                   <h2 className="text-[24px] text-[#1A94D5] font-semibold pb-[10px]">
                     Service
                   </h2>
-                  <h3 className="lg:text-[64px] md:text-[64px] text-[50px] text-[#263F49] pb-[20px] font-bold">
+                  <h3 className="lg:text-[64px] md:text-[64px] text-[30px] text-[#263F49] lg:pb-[20px] md:pb-[20px] pb-[15px] font-bold">
                     {item?.title}
                   </h3>
-                  <p className="text-[#606060] lg:text-[32px] md:text-[32px] text-[25px]">
+                  <p className="text-[#606060] lg:text-[32px] md:text-[32px] text-[20px]">
                     {item?.description}
                   </p>
                   <Link href={item?.link}>
                     <CustomButton
-                      label="learn more"
+                      label="Learn more"
                       variant="dark"
-                      className="py-[15px] mt-[30px]"
+                      className="py-[15px] lg:mt-[30px] md:mt-[30px] mt-[20px]"
                     />
                   </Link>
                 </div>
               </div>
-              <div className="lg:w-[53%] md:w-[53%] w-full h-[615px] relative">
+              <div className="lg:w-[50%] md:w-[50%] w-full h-[615px] relative">
                 <Image
                   src={item?.icon}
                   alt={item?.title}

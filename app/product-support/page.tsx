@@ -7,7 +7,7 @@ const ProductSupport = () => {
   const des = `Provide on site and off site teams for maintenance services`;
   const label = "Get Product support";
   const image = "/assets/icons/supply-chain.svg";
-  const whyUs = `At Techsols, we combine deep industry expertise with innovative technology solutions to deliver real, measurable impact. Our client-centric approach ensures every solution is tailored to your unique business needs, driving efficiency, scalability, and growth. With a proven track record of successful digital transformations, we are trusted partners in navigating complex challenges and unlocking new opportunities. From strategic consultation to seamless implementation and ongoing support, we’re committed to excellence at every step. Choose Techsols for a partnership rooted in trust, innovation, and results.`;
+  const whyUs = `At Techsols, we provide offsite and onsite services and we combine deep industry expertise with innovative technology solutions to deliver real, measurable impact. Our client-centric approach ensures every solution is tailored to your unique business needs, driving efficiency, scalability, and growth. With a proven track record of successful digital transformations, we are trusted partners in navigating complex challenges and unlocking new opportunities. From strategic consultation to seamless implementation and ongoing support, we’re committed to excellence at every step. Choose Techsols for a partnership rooted in trust, innovation, and results.`;
 
   const detail = [
     {

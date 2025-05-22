@@ -8,10 +8,8 @@ import { sendEmail } from "../actions/sendEmail";
 import CustomToast from "@/components/ui/customToast";
 import { useState } from "react";
 
-
 const ContactUs = () => {
-
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   interface contactUsForm {
     firstName: string;
     lastName: string;
@@ -30,14 +28,14 @@ const ContactUs = () => {
 
   const onSubmit: SubmitHandler<contactUsForm> = async (detail) => {
     try {
-      setIsLoading(true)
+      setIsLoading(true);
       await sendEmail(detail);
       reset();
-      CustomToast.success("Message send successfully.")
+      CustomToast.success("Message send successfully.");
     } catch (error) {
-      CustomToast.error("Failed to send message")
-    } finally{
-      setIsLoading(false)
+      CustomToast.error("Failed to send message");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -101,120 +99,122 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="main-contain bg-[#E6F3FB]">
-        <div className="section-gap text-center">
-          <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">
-            Contact Us
-          </h1>
-          <p className="text-[#4F4F4F] text-[14px] font-[500]">
-            Consultancy provided for Risk planning, Trade finance and supply
-            chain finance products. Worked on projects with Public & private{" "}
-            <span className="hidden md:inline">
-              <br />
-            </span>
-            organisations on providing consultancy and product support.
-          </p>
-          <div className="flex justify-center lg:pt-[100px] md:pt-[100px] pt-[50px]">
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="lg:w-[60%] md:w-[60%] w-full"
-            >
-              <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-[27px]">
-                <div>
-                  <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
-                    First Name{" "}
-                    <span className="text-red-500 mt-[1px] pl-[1px] block">
-                      *
-                    </span>
-                  </label>
-                  <input
-                    {...register("firstName")}
-                    placeholder="User"
-                    className="p-[13px] bg-[#FFFFFF] w-full focus:outline-none rounded-[9px]"
-                  />
-                  {errors.firstName && (
-                    <p className="text-red-500 text-xs w-full text-start mt-[5px]">
-                      {errors.firstName.message}
-                    </p>
-                  )}
+      <div className="bg-[#E6F3FB] mb-[94px]">
+        <div className="main-contain">
+          <div className="section-gap text-center">
+            <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">
+              Contact Us
+            </h1>
+            <p className="text-[#4F4F4F] text-[14px] font-[500]">
+              Consultancy provided for Risk planning, Trade finance and supply
+              chain finance products. Worked on projects with Public & private{" "}
+              <span className="hidden md:inline">
+                <br />
+              </span>
+              organisations on providing consultancy and product support.
+            </p>
+            <div className="flex justify-center lg:pt-[100px] md:pt-[100px] pt-[50px]">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="lg:w-[60%] md:w-[60%] w-full"
+              >
+                <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-[27px]">
+                  <div>
+                    <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
+                      First Name{" "}
+                      <span className="text-red-500 mt-[1px] pl-[1px] block">
+                        *
+                      </span>
+                    </label>
+                    <input
+                      {...register("firstName")}
+                      placeholder="User"
+                      className="p-[13px] bg-[#FFFFFF] w-full focus:outline-none rounded-[9px]"
+                    />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-xs w-full text-start mt-[5px]">
+                        {errors.firstName.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
+                      Last Name
+                      <span className="text-red-500 mt-[1px] pl-[1px] block">
+                        *
+                      </span>
+                    </label>
+                    <input
+                      {...register("lastName")}
+                      placeholder="User"
+                      className="p-[13px] bg-[#FFFFFF] w-full focus:outline-none rounded-[9px]"
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-xs w-full text-start mt-[5px]">
+                        {errors.lastName.message}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
-                <div>
-                  <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
-                    Last Name
-                    <span className="text-red-500 mt-[1px] pl-[1px] block">
-                      *
-                    </span>
-                  </label>
-                  <input
-                    {...register("lastName")}
-                    placeholder="User"
-                    className="p-[13px] bg-[#FFFFFF] w-full focus:outline-none rounded-[9px]"
-                  />
-                  {errors.lastName && (
-                    <p className="text-red-500 text-xs w-full text-start mt-[5px]">
-                      {errors.lastName.message}
-                    </p>
-                  )}
+                <div className="grid grid-cols-1 gap-[27px] pt-[20px]">
+                  <div>
+                    <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
+                      Email
+                      <span className="text-red-500 mt-[1px] pl-[1px] block">
+                        *
+                      </span>
+                    </label>
+                    <input
+                      {...register("email")}
+                      placeholder="User@gmail.com"
+                      className="p-[13px] bg-[#FFFFFF] w-full focus:outline-none rounded-[9px]"
+                    />
+                    {errors.email && (
+                      <p className="text-red-500 text-xs w-full text-start mt-[5px]">
+                        {errors.email.message}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              <div className="grid grid-cols-1 gap-[27px] pt-[20px]">
-                <div>
-                  <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
-                    Email
-                    <span className="text-red-500 mt-[1px] pl-[1px] block">
-                      *
-                    </span>
-                  </label>
-                  <input
-                    {...register("email")}
-                    placeholder="User@gmail.com"
-                    className="p-[13px] bg-[#FFFFFF] w-full focus:outline-none rounded-[9px]"
-                  />
-                  {errors.email && (
-                    <p className="text-red-500 text-xs w-full text-start mt-[5px]">
-                      {errors.email.message}
-                    </p>
-                  )}
+                <div className="pt-[20px]">
+                  <div>
+                    <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
+                      Message
+                      <span className="text-red-500 mt-[1px] pl-[1px] block">
+                        *
+                      </span>
+                    </label>
+                    <textarea
+                      {...register("message")}
+                      placeholder="Write your message.."
+                      rows={5}
+                      className="p-[13px] bg-[#FFFFFF] w-full focus:outline-none rounded-[9px]"
+                    />
+                    {errors.message && (
+                      <p className="text-red-500 text-xs w-full text-start mt-[5px]">
+                        {errors.message.message}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              <div className="pt-[20px]">
-                <div>
-                  <label className="text-[14px] font-[500] mb-[5px] text-[#000] flex">
-                    Message
-                    <span className="text-red-500 mt-[1px] pl-[1px] block">
-                      *
-                    </span>
-                  </label>
-                  <textarea
-                    {...register("message")}
-                    placeholder="Write your message.."
-                    rows={5}
-                    className="p-[13px] bg-[#FFFFFF] w-full focus:outline-none rounded-[9px]"
+                <div className="flex justify-end pt-[25px]">
+                  <CustomButton
+                    label="Get in Touch"
+                    type="submit"
+                    style={{
+                      border: "0px",
+                      borderRadius: "10px",
+                    }}
+                    loading={isLoading}
+                    className="h-[50px] px-[20px]"
                   />
-                  {errors.message && (
-                    <p className="text-red-500 text-xs w-full text-start mt-[5px]">
-                      {errors.message.message}
-                    </p>
-                  )}
                 </div>
-              </div>
-
-              <div className="flex justify-end pt-[25px]">
-                <CustomButton
-                  label="Get in Touch"
-                  type="submit"
-                  style={{
-                    border: "0px",
-                    borderRadius: "10px",
-                  }}
-                  loading={isLoading}
-                  className="h-[50px] px-[20px]"
-                />
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>

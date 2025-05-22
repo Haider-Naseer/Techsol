@@ -31,14 +31,15 @@ export const Footer = () => {
                     Email: info@techsol-bh.com
                   </p>
                 </div>
-                <div className="flex gap-[20px] mt-[20px] lg:pl-[30px] md:pl-[30px] pl-[0px]">
+                <div className="flex gap-[10px] mt-[10px]">
+                Follow us on our Social:
                   {socialIcon?.map((item, index) => (
                     <Link href={item?.link} target="_blank">
                       <Image
                         key={index}
                         src={item?.image}
-                        width={25}
-                        height={25}
+                        width={20}
+                        height={20}
                         alt={`social-icon`}
                       />
                     </Link>
@@ -57,7 +58,7 @@ export const Footer = () => {
                     <a href="/about-us">About us</a>
                   </li>
                   <li>
-                    <a href="/team">Team</a>
+                    <a href="/trade-risk">Trade Risk</a>
                   </li>
                   <li>
                     <a href="/contact-us">Contact us</a>
@@ -69,9 +70,6 @@ export const Footer = () => {
                   Our Services
                 </h2>
                 <ul className="leading-[40px]">
-                  <li>
-                    <a href="/trade-risk">Trade Risk</a>
-                  </li>
                   <li>
                     <a href="/advisory-on-digitization">
                       Advisory on digitization
@@ -91,7 +89,7 @@ export const Footer = () => {
           </div>
           <div className="lg:flex md:flex justify-between container-max-width  border-t-[1px] pt-[36px] mt-[36px] pt-[36px] border-t-[#FFFFFF36] w-full">
             <div>
-              <span>©2022 Techsol. All rights reserved</span>
+              <span>©2025 Techsol. All rights reserved</span>
             </div>
             <div className="flex gap-[60px] lg:mt-[0px] md:mt-[0px] mt-[15px]">
               <Link href="/privacy-policy">

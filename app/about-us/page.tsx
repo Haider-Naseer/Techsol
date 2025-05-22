@@ -79,8 +79,8 @@ const AboutUsPage = () => {
                 src={"/assets/icons/our-vision.svg"}
                 className="m-auto"
                 alt="our-mission"
-                width={500}
-                height={500}
+                width={600}
+                height={300}
               />
             </div>
             <div className="flex items-center">
@@ -132,13 +132,6 @@ const AboutUsPage = () => {
               src={"/assets/icons/our-journey-bg.png"}
               alt="bg"
               className="absolute top-[0px] left-[2px]"
-              width={176}
-              height={176}
-            />
-            <Image
-              src={"/assets/icons/our-journey-bg.png"}
-              alt="bg"
-              className="absolute lg:block md:block hidden top-[30%] right-[200px]"
               width={176}
               height={176}
             />

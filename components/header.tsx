@@ -10,8 +10,7 @@ export const LandingPageHeader = () => {
   const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(false); // NEW: for mobile submenu
-
+  const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(false);
   const homePath = ["/", "/advisory-supply-chain", "/digital-platform"];
   const servicePath = [
     "",
@@ -29,7 +28,6 @@ export const LandingPageHeader = () => {
       active: servicePath.includes(pathname),
       hasSubmenu: true,
       submenu: [
-        { name: "Trade Risk", link: "/trade-risk" },
         { name: "Advisory on Digitization", link: "/advisory-on-digitization" },
         { name: "SCF Product Support", link: "/product-support" },
         { name: "Resource Augmentation", link: "/resources-augmentation" },
@@ -98,7 +96,7 @@ export const LandingPageHeader = () => {
                     <Link
                       key={subIndex}
                       href={subItem.link}
-                      className="block text-center px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                      className="block text-left pl-[10px] py-2 text-sm text-gray-800 hover:bg-gray-100"
                     >
                       {subItem.name}
                     </Link>
