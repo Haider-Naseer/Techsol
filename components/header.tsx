@@ -33,7 +33,11 @@ export const LandingPageHeader = () => {
         { name: "Resource Augmentation", link: "/resources-augmentation" },
       ],
     },
-    { name: "Trade Risk", link: "/trade-risk", active: pathname === "/trade-risk" },
+    {
+      name: "Trade Risk",
+      link: "/trade-risk",
+      active: pathname === "/trade-risk",
+    },
     {
       name: "Contact",
       link: "/contact-us",
@@ -91,12 +95,12 @@ export const LandingPageHeader = () => {
 
               {/* Desktop submenu */}
               {item.hasSubmenu && isHovered && (
-                <div className="absolute top-full left-[-45px] bg-white shadow-lg py-2 px-2 rounded z-50 min-w-[200px]">
+                <div className="absolute top-full left-[-45px] bg-white shadow-lg py-2 rounded z-50 min-w-[200px]">
                   {item.submenu?.map((subItem, subIndex) => (
                     <Link
                       key={subIndex}
                       href={subItem.link}
-                      className="block text-left pl-[10px] py-2 text-sm text-gray-800 hover:bg-gray-100"
+                      className={`${subIndex == 2 ? "border-b-0 mt-[1px]" : subIndex == 0 ? "border-t-0 mb-[1px]" : null} block border-[2px] border-[#F1F5F9] text-left text-[#333333] pl-[10px] py-2 text-sm`}
                     >
                       {subItem.name}
                     </Link>
@@ -151,7 +155,7 @@ export const LandingPageHeader = () => {
                           <Link
                             key={subIndex}
                             href={subItem.link}
-                            className="text-gray-700 text-sm"
+                            className="text-gray-700 text-sm text-[#333333]"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {subItem.name}

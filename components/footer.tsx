@@ -34,7 +34,7 @@ export const Footer = () => {
                 <div className="flex gap-[10px] mt-[10px]">
                 Follow us on our Social:
                   {socialIcon?.map((item, index) => (
-                    <Link href={item?.link} target="_blank">
+                    <Link href={item?.link} key={index} target="_blank">
                       <Image
                         key={index}
                         src={item?.image}

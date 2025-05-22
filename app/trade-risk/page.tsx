@@ -71,7 +71,7 @@ const Services = () => {
               <div className="lg:mt-[125px] mb:mt-[125px] mt-[80px]">
                 <div className="lg:grid grid-cols-2 md:grid grid-cols-2 gap-[50px] lg:w-[60%] md:w-[60%] m-auto">
                   {detail?.map((item, index) => (
-                    <div className="text-center mb-[20px]">
+                    <div key={index} className="text-center mb-[20px]">
                       <div className="flex justify-center mb-[16px] min-h-[50px]">
                         <Image
                           src={item?.icon}

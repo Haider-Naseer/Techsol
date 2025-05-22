@@ -99,7 +99,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#E6F3FB] mb-[94px]">
+      <div className="bg-[#E6F3FB] lg:mb-[94px] md:mb-[94px] mb-[50px]">
         <div className="main-contain">
           <div className="section-gap text-center">
             <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">

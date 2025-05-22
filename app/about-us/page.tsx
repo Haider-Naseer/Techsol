@@ -1,4 +1,5 @@
 import OurTeam from "@/components/our-team/page";
+import Team from "@/components/team/page";
 import Image from "next/image";
 
 const AboutUsPage = () => {
@@ -128,17 +129,10 @@ const AboutUsPage = () => {
                 transformation with confidence.
               </p>
             </div>
-            <Image
-              src={"/assets/icons/our-journey-bg.png"}
-              alt="bg"
-              className="absolute top-[0px] left-[2px]"
-              width={176}
-              height={176}
-            />
           </div>
         </div>
       </div>
-      <OurTeam />
+      <Team />
     </>
   );
 };

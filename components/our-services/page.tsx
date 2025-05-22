@@ -35,7 +35,7 @@ const OurServices = () => {
         <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">
           Our Services
         </h1>
-        <div className="pt-[40px] md:lg:pt-[80px] md:pt-[80px] pt-[40px] lg:lg:pt-[80px] md:pt-[80px] pt-[40px] lg:lg:gap-[80px] md:gap-[80px] gap-[40px] md:lg:gap-[80px] md:gap-[80px] gap-[40px] gap-[40px]">
+        <div className="md:pt-[80px] lg:pt-[80px] gap-[40px] md:gap-[80px] lg:gap-[80px]">
           {data?.map((item, index) => (
             <div
               key={index}
@@ -45,9 +45,6 @@ const OurServices = () => {
             >
               <div className="lg:w-[50%] md:w-[50%] py-[40px] px-[40px] lg:px-[0px] md:px-[0px] w-full h-full flex items-center">
                 <div className="lg:w-[60%] md:w-[70%] w-full m-auto">
-                  <h2 className="text-[24px] text-[#1A94D5] font-semibold pb-[10px]">
-                    Service
-                  </h2>
                   <h3 className="lg:text-[64px] md:text-[64px] text-[30px] text-[#263F49] lg:pb-[20px] md:pb-[20px] pb-[15px] font-bold">
                     {item?.title}
                   </h3>

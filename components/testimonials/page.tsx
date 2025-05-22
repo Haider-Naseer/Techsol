@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import { SliderCarousel } from "@/components/ui/sliderCarousel";
 import Image from "next/image";
 
@@ -22,6 +24,18 @@ const Testimonials = () => {
     },
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust for your breakpoint
+    };
+
+    handleResize(); // Set initial state
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <div className="w-full bg-[#FFFFFF]">
@@ -30,12 +44,15 @@ const Testimonials = () => {
             <h2 className="text-[30px] font-[600] text-[#5A84DF]">
               Testimonials
             </h2>
-            <div className="pt-[110px]">
-              <SliderCarousel autoPlay={false} showArrow={false}>
+            <div className="lg:pt-[110px] md:pt-[110px] pt-[50px]">
+              <SliderCarousel
+                autoPlay={isMobile ? true : false}
+                showArrow={isMobile ? true : false}
+              >
                 {detail?.map((item, index) => (
                   <div
                     key={index}
-                    className="relative max-w-[90%] min-h-[400px] my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.05),_2px_2px_6px_rgba(0,0,0,0.1)] p-6"
+                    className="relative max-w-[90%] lg:min-h-[350px] md:min-h-[350px] lg:pb-0 md:pb-0 pb-[60px]  my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.05),_2px_2px_6px_rgba(0,0,0,0.1)] p-6"
                   >
                     <div className="absolute -top-6 left-4 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center shadow-md">
                       <Image
