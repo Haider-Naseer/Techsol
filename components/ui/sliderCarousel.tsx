@@ -41,14 +41,13 @@ export const SliderCarousel = ({
   children,
   slidesToShow = 3,
   autoPlay = true,
-  showArrow = true
+  showArrow = true,
 }: {
   children: React.ReactNode;
   slidesToShow?: number;
-  autoPlay?: boolean
-  showArrow?: boolean
+  autoPlay?: boolean;
+  showArrow?: boolean;
 }) => {
-
   const settings = {
     dots: false,
     infinite: true,
@@ -57,8 +56,6 @@ export const SliderCarousel = ({
     slidesToScroll: 1,
     autoplay: autoPlay,
     autoplaySpeed: 5000,
-    nextArrow: showArrow && <NextArrow />,
-    prevArrow: showArrow && <PrevArrow />,
     responsive: [
       {
         breakpoint: 768,
@@ -67,6 +64,12 @@ export const SliderCarousel = ({
         },
       },
     ],
+    ...(showArrow
+      ? {
+          nextArrow: <NextArrow />,
+          prevArrow: <PrevArrow />,
+        }
+      : {}),
   };
 
   return (
