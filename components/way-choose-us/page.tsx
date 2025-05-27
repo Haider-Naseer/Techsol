@@ -19,8 +19,11 @@ const WayChooseUs = ({ whyUs }: { whyUs: string }) => {
 
       <div className="bg-[#F1F5F9] w-full">
         <div className="main-contain">
-          <div className="py-[55px] text-center justify-center w-[85%] m-auto">
-            <p className="lg:text-[20px] md:text-[20px] text-[18px]">{whyUs}</p>
+          <div className="py-[80px] text-center justify-center w-[85%] m-auto">
+            <p
+              className="lg:text-[20px] text-[#0F172A] md:text-[20px] text-[18px]"
+              dangerouslySetInnerHTML={{ __html: whyUs }}
+            />
           </div>
         </div>
       </div>

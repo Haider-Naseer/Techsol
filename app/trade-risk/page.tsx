@@ -68,7 +68,7 @@ const Services = () => {
                   What Trade Risk is offering to our clients
                 </h2>
               </div>
-              <div className="lg:mt-[125px] mb:mt-[125px] mt-[80px]">
+              <div className="lg:mt-[80px] mb:mt-[80px] mt-[40px]">
                 <div className="lg:grid grid-cols-2 md:grid grid-cols-2 gap-[50px] lg:w-[60%] md:w-[60%] m-auto">
                   {detail?.map((item, index) => (
                     <div key={index} className="text-center mb-[20px]">

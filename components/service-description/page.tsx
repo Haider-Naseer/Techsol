@@ -9,8 +9,10 @@ const ServiceDescription = ({ offering }: { offering: string }) => {
         </div>
       </div>
       <div className="main-contain">
-        <div className="lg:py-[55px] md:py-[55px] text-center justify-center lg:w-[85%] md:w-[85%] m-auto">
-          <p className="lg:text-[20px] md:text-[20px] text-[18px]">{offering}</p>
+        <div className="text-center justify-center lg:w-[85%] md:w-[85%] m-auto">
+          <p className="lg:text-[20px] text-[#0F172A] md:text-[20px] text-[18px]">
+            {offering}
+          </p>
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@ name: 'For Financial Institutions (FI):',    },
                   {detail?.map((item, index) => (
                     <div
                       key={index}
-                      className="relative lg:w-[49%] md:w-[49%] w-full my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.15),_-2px_4px_8px_rgba(0,0,0,0.1),_2px_4px_8px_rgba(0,0,0,0.1)] p-6"
+                      className="relative lg:w-[49%] md:w-[49%] w-full my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] p-6"
 
                     >
                       <ul className="list-disc pl-5 ">

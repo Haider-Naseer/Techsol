@@ -1,14 +1,13 @@
 "use client";
-import { useEffect, useState } from "react";
-import { SliderCarousel } from "@/components/ui/sliderCarousel";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
-const Testimonials = () => {
-  const detail = [
+const TestimonialCards = () => {
+  const testimonials = [
     {
-      describe: `“Qualco has collaborated with Techsol for sourcing technical staff for our complex SCF projects in the KSA, along with SCF product and implementation advisory services. They have proved to be reliable partners who have very good expertise and command over Supply chain Finance products as well as SCF digital functionalities required`,
+      describe: `Qualco has collaborated with Techsol for sourcing technical staff for our complex SCF projects in the KSA, along with SCF product and implementation advisory services. They have proved to be reliable partners who have very good expertise and command over Supply chain Finance products as well as SCF digital functionalities required`,
       department: `International Business Development Director / Senior Business Consultant, Receivables & SCF solutions`,
-      image: "/assets/icons/testimonials-01.png",
+      image: "/assets/icons/testimonials-03.png",
     },
     {
       describe: `TECHSOL has been a reliable partner in terms of engaging, advising and providing services to customers. Their approach towards transactions and processes is very professional.`,
@@ -20,80 +19,93 @@ const Testimonials = () => {
       describe: `TECHSOL has been a reliable partner in terms for Premium Technology, providing valuable support for our SCF product implementation in the region. They have consistently demonstrated their dependability, making them a partner we can count on`,
       name: "George Koukis",
       department: `International Business Development Director / Senior Business Consultant, Receivables & SCF solutions`,
-      image: "/assets/icons/testimonials-03.png",
+      image: "/assets/icons/testimonials-01.png",
     },
   ];
 
   const [isMobile, setIsMobile] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust for your breakpoint
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // Set initial state
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return (
-    <>
-      <div className="w-full bg-[#FFFFFF]">
-        <div className="main-contain relative">
-          <div className="section-gap text-center">
-            <h2 className="text-[30px] font-[600] text-[#5A84DF]">
-              Testimonials
-            </h2>
-            <div className="lg:pt-[110px] md:pt-[110px] pt-[50px]">
-              <SliderCarousel
-                autoPlay={isMobile ? true : false}
-                showArrow={isMobile ? true : false}
-              >
-                {detail?.map((item, index) => (
-                  <div
-                    key={index}
-                    className="relative max-w-[90%] lg:min-h-[350px] md:min-h-[350px] lg:pb-0 md:pb-0 pb-[60px]  my-[25px] mx-auto text-start bg-white rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.05),_2px_2px_6px_rgba(0,0,0,0.1)] p-6"
-                  >
-                    <div className="absolute -top-6 left-4 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center shadow-md">
-                      <Image
-                        src={"/assets/icons/profile.svg"}
-                        width={75}
-                        height={75}
-                        alt="profile"
-                      />
-                    </div>
+  // Auto slide for mobile
+  useEffect(() => {
+    if (isMobile) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isMobile]);
 
-                    <div className="flex justify-end mb-2">
-                      <div className="flex space-x-1 text-blue-500">
-                        <span>★★★★★</span>
-                      </div>
-                    </div>
+  const renderCard = (item: any, index: number) => (
+    <div
+      key={index}
+      className="min-w-full mb-[50px] lg:mb-[0px] md:mb-[0px] px-4 transition-transform duration-500 ease-in-out"
+    >
+      <div className="relative text-start bg-white py-6 px-4 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] justify-between lg:min-h-[500px] md:min-h-[500px] min-h-[400px] max-w-[100%]">
+        <div className="absolute -top-6 left-4 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center shadow-md">
+          <Image
+            src={"/assets/icons/profile.svg"}
+            width={75}
+            height={75}
+            alt="profile"
+          />
+        </div>
 
-                    <p className="text-gray-700 text-base leading-relaxed mb-4">
-                      <span className="text-blue-500 text-xl font-serif font-bold pr-[5px]">
-                        “
-                      </span>
-                      {item?.describe}
-                      <span className="text-blue-500 text-xl font-serif font-bold pl-[5px]">
-                        ”
-                      </span>
-                    </p>
-
-                    <div className="absolute bottom-4 left-4">
-                      <img
-                        src={item?.image}
-                        alt="testimonials"
-                        className="w-full h-full"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </SliderCarousel>
-            </div>
+        <div className="flex justify-end mb-2">
+          <div className="flex space-x-1 text-blue-500">
+            <span>★★★★★</span>
           </div>
         </div>
+
+        <p className="text-gray-700 text-base leading-relaxed mb-4">
+          <span className="text-blue-500 text-xl font-serif font-bold pr-[5px]">
+            “
+          </span>
+          {item?.describe}
+          <span className="text-blue-500 text-xl font-serif font-bold pl-[5px]">
+            ”
+          </span>
+        </p>
+
+        <div className="absolute bottom-4 left-4">
+          <img src={item?.image} alt="testimonials" className="w-full h-full" />
+        </div>
       </div>
-    </>
+    </div>
+  );
+
+  return (
+    <div className="bg-white">
+      <div className="section-gap text-center">
+        <h2 className="text-[30px] font-[600] text-[#000]">Testimonials</h2>
+
+        {isMobile ? (
+          <div className="overflow-hidden w-full pt-[50px]">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {testimonials.map((item, index) => renderCard(item, index))}
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 pt-[50px] px-[200px]">
+            {testimonials.map((item, index) => renderCard(item, index))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
-export default Testimonials;
+
+export default TestimonialCards;

@@ -4,7 +4,7 @@ import CustomButton from "../ui/button";
 
 export const HeroSection = () => {
   return (
-    <div className="max-h-[1100px] min-h-[600px] relative h-[104.5vh] overflow-hidden -mt-[170px] pt-[250px] lg:pt-[270px] md:pt-[270px]">
+    <div className="max-h-[1100px] min-h-[600px] relative h-[104.5vh] overflow-hidden -mt-[170px] pt-[270px] lg:pt-[270px] md:pt-[270px]">
       <div className="main-contain">
         <video
           autoPlay

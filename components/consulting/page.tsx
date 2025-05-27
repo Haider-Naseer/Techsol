@@ -26,13 +26,15 @@ const Consulting = () => {
   return (
     <div className="w-full bg-[#fff] lg:pt-[80px] md:pt-[80px] pt-[40px] pb-[60px]">
       <div className="main-contain text-center">
-        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">Consulting</h1>
+        <h1 className="text-[#252525] lg:text-[48px] md:text-[48px] font-[600] text-[35px]">
+          Consulting
+        </h1>
         <div className="grid  md:grid-cols-3 lg:grid-cols-3 grid-cols-1 pt-[30px] gap-[20px] md:gap-[130px] lg:gap-[130px]">
           {data?.map((item, index) => (
             <Link href={item?.link}>
               <div
                 key={index}
-                className="bg-[#FFFFFF] h-full rounded-[8px] pt-[24px] pb-[36px]"
+                className="bg-[#FFFFFF] h-full rounded-[8px] pt-[24px] pb-[36px] shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="lg:w-[75%] md:w-[75%] w-[85%] m-auto">
                   <div className="pb-[16px] flex justify-center">

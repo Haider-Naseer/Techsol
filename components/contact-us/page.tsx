@@ -34,7 +34,7 @@ export const ContactUs = () => {
                   <li className="flex gap-[22px] text-[#263F49] text-[16px]  pt-[30px]">
                     <MapIcon />
                     <div>
-                      9033 Bldg 15, 3801, Block 338, Al-Qudaybiyah, Manama,
+                      9033 Bldg 15, 3801, Block 338, Al- <br/> Qudaybiyah, Manama,
                       Bahrain
                     </div>
                   </li>

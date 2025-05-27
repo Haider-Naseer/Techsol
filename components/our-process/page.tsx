@@ -37,7 +37,7 @@ const OurProcess = () => {
             <ul>
               {detail?.map((item, index) => (
                 <li key={index} className="mb-[12px]">
-                  <p className="text-[#262626E5] text-[24px] font-[600]">
+                  <p className="text-[#262626E5] text-[25px] font-[600]">
                     {index + 1}. {item?.title}
                   </p>
                   <div className="pl-[28px]">

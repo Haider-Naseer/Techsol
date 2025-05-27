@@ -4,7 +4,6 @@ import ServiceDescription from "@/components/service-description/page";
 import WayChooseUs from "@/components/way-choose-us/page";
 
 const AdvisoryOnDigitization = () => {
-
   const title = "Advisory on Digitization";
   const des = `Transforming businesses with innovative digital solutions.`;
   const label = "Get Advice on Digitization  ";
@@ -23,19 +22,14 @@ const AdvisoryOnDigitization = () => {
             long-term value, we ensure that your organization remains agile,
             efficient, and future-ready.`;
 
-  const whyUs = `Embrace tech advancements for success. Your trusted partner in transforming your organization through digital innovation. We help you navigate the complexities of digital transformation, unlocking new revenue streams, improving operational efficiency, and enhancing customer experience `;
+  const whyUs = `Embrace tech advancements for success. Your trusted partner in transforming your  organization through digital innovation. We help you navigate the complexities of digital  transformation, unlocking new revenue streams, improving operational efficiency, and  enhancing customer experience `;
   return (
     <>
-      <HeroService
-        title={title}
-        des={des}
-        label={label}
-        image={image}
-      />
-        <>
-          <ServiceDescription offering={offering} />
-          <WayChooseUs whyUs={whyUs} />
-        </>
+      <HeroService title={title} des={des} label={label} image={image} />
+      <>
+        <ServiceDescription offering={offering} />
+        <WayChooseUs whyUs={whyUs} />
+      </>
     </>
   );
 };

@@ -6,25 +6,25 @@ const OurServices = () => {
   const data = [
     {
       title: "Trade Risk",
-      description: `"Techsols' platform digitizes trade finance, connecting banks and corporates to execute global deals seamlessly."`,
+      description: `Techsol’s platform digitizes trade finance , <br class="responsive-br" /> connecting banks and corporates to <br class="responsive-br" /> execute global deals seamlessly.`,
       icon: "/assets/icons/service-01.png",
       link: "/trade-risk",
     },
     {
       title: "Advisory on digitization",
-      description: `Digitization advisory: Embrace tech advancements for success`,
+      description: `Digitization advisory: Embrace tech <br class="responsive-br" /> advancements for success`,
       icon: "/assets/icons/service-02.png",
       link: "/advisory-on-digitization",
     },
     {
       title: "Product Support",
-      description: `Provide on site and off site teams for maintenance services`,
+      description: `Provide on site and off site teams for <br class="responsive-br" /> maintenance services`,
       icon: "/assets/icons/service-03.png",
       link: "/product-support",
     },
     {
       title: "It Resources Augmentation",
-      description: `Enhancing operational efficiency and streamlining processes through our expert support solutions`,
+      description: `Enhancing operational efficiency and <br class="responsive-br" /> streamlining processes through our expert <br class="responsive-br" /> support solutions`,
       icon: "/assets/icons/service-04.png",
       link: "/resources-augmentation",
     },
@@ -43,14 +43,15 @@ const OurServices = () => {
                 index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
               } items-center text-left`}
             >
-              <div className="lg:w-[50%] md:w-[50%] py-[40px] px-[40px] lg:px-[0px] md:px-[0px] w-full h-full flex items-center">
-                <div className="lg:w-[60%] md:w-[70%] w-full m-auto">
-                  <h3 className="lg:text-[64px] md:text-[64px] text-[30px] text-[#263F49] lg:pb-[20px] md:pb-[20px] pb-[15px] font-bold">
+              <div className="lg:w-[50%] md:w-[50%] py-[50px] px-[40px] lg:px-[0px] md:px-[0px] w-full h-full flex items-center">
+                <div className="w-full m-auto lg:ml-[80px] md:ml-[80px]">
+                  <h3 className="lg:text-[40px] md:text-[40px] text-[25px] text-[#263F49] lg:pb-[20px] md:pb-[20px] pb-[15px] font-bold">
                     {item?.title}
                   </h3>
-                  <p className="text-[#606060] lg:text-[32px] md:text-[32px] text-[20px]">
-                    {item?.description}
-                  </p>
+                  <p
+                    className="text-[#606060] lg:text-[24px] md:text-[24px] font-medium text-[20px]"
+                    dangerouslySetInnerHTML={{ __html: item?.description }}
+                  />
                   <Link href={item?.link}>
                     <CustomButton
                       label="Learn more"
@@ -60,7 +61,7 @@ const OurServices = () => {
                   </Link>
                 </div>
               </div>
-              <div className="lg:w-[50%] md:w-[50%] w-full h-[615px] relative">
+              <div className="lg:w-[50%] md:w-[50%] w-full lg:h-[615px] md:h-[615px] h-[400px] relative">
                 <Image
                   src={item?.icon}
                   alt={item?.title}
