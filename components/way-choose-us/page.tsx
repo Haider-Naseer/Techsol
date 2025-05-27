@@ -19,11 +19,10 @@ const WayChooseUs = ({ whyUs }: { whyUs: string }) => {
 
       <div className="bg-[#F1F5F9] w-full">
         <div className="main-contain">
-          <div className="py-[80px] text-center justify-center w-[85%] m-auto">
-            <p
-              className="lg:text-[20px] text-[#0F172A] md:text-[20px] text-[18px]"
-              dangerouslySetInnerHTML={{ __html: whyUs }}
-            />
+          <div className="lg:py-[80px] md:py-[80px] py-[40px] text-center justify-center lg:w-[85%] md:w-[85%] m-auto">
+            <p className="lg:text-[20px] text-[#0F172A] md:text-[20px] text-[16px]">
+              {whyUs}
+            </p>
           </div>
         </div>
       </div>
@@ -33,7 +32,7 @@ const WayChooseUs = ({ whyUs }: { whyUs: string }) => {
         alt="bulb"
         width={175}
         height={175}
-        className="absolute top-[100px] left-[10px]"
+        className="absolute lg:visible md:visible hidden top-[100px] left-[10px]"
       />
     </div>
   );

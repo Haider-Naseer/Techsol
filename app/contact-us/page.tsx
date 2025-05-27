@@ -201,7 +201,7 @@ const ContactUs = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-end pt-[25px]">
+                <div className="flex lg:justify-end md:justify-end  justify-center pt-[25px]">
                   <CustomButton
                     label="Get in Touch"
                     type="submit"
@@ -210,7 +210,7 @@ const ContactUs = () => {
                       borderRadius: "10px",
                     }}
                     loading={isLoading}
-                    className="h-[50px] px-[20px]"
+                    className="h-[50px] lg:px-[20px] md:px-[20px] px-[60px]"
                   />
                 </div>
               </form>

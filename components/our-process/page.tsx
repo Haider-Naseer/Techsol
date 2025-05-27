@@ -29,8 +29,8 @@ const OurProcess = () => {
             <Image
               src={"/assets/icons/process-image.jpg"}
               alt="icon"
-              width={800}
-              height={800}
+              width={1000}
+              height={1000}
             />
           </div>
           <div className="text-start lg:w-[35%] md:w-[35%] w-full">

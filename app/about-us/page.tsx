@@ -1,4 +1,3 @@
-import OurTeam from "@/components/our-team/page";
 import Team from "@/components/team/page";
 import Image from "next/image";
 
@@ -72,10 +71,11 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
+
       <div className="w-full bg-[#FFFFFF] section-gap">
         <div className="main-contain text-center relative">
           <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-[50px]">
-          <div className="lg:mt-[0px] md:mt-[0px] mt-[15px]">
+            <div className="lg:mt-[0px] md:mt-[0px] mt-[15px] order-2 md:order-1">
               <Image
                 src={"/assets/icons/our-vision.svg"}
                 className="m-auto"
@@ -84,12 +84,13 @@ const AboutUsPage = () => {
                 height={300}
               />
             </div>
-            <div className="flex items-center">
+
+            <div className="flex items-center order-1 md:order-2">
               <div className="text-start">
                 <h2 className="text-[30px] font-[600] text-[#5A84DF]">
                   Our Vision
                 </h2>
-                <p className="text-[#868686] lg:text-[18px] md:text-[18px] text-[16px] pt-[13px] lg:pr-[150px] md:pr-[150px]">
+                <p className="text-[#868686] lg:text-[18px] md:text-[18px] text-[16px] pt-[13px]">
                   Our vision is to be a global leader in technology solutions,
                   recognized for our expertise in digital transformation, cloud
                   computing, AI-driven insights, and enterprise solutions. We
@@ -100,15 +101,17 @@ const AboutUsPage = () => {
               </div>
             </div>
           </div>
+
           <Image
             src={"/assets/icons/our-vision-bg.png"}
             alt="bg"
-            className="absolute left-5 top-[40%]"
+            className="absolute md:visible lg:visible hidden  left-5 top-[40%]"
             width={176}
             height={176}
           />
         </div>
       </div>
+
       <div className="w-full bg-[#FFFFFF]">
         <div className="main-contain relative">
           <div className="section-gap lg:text-center md:text-center">

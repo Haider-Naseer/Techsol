@@ -51,7 +51,7 @@ const TestimonialCards = () => {
       key={index}
       className="min-w-full mb-[50px] lg:mb-[0px] md:mb-[0px] px-4 transition-transform duration-500 ease-in-out"
     >
-      <div className="relative text-start bg-white py-6 px-4 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] justify-between lg:min-h-[500px] md:min-h-[500px] min-h-[400px] max-w-[100%]">
+      <div className="relative text-start bg-white py-6 px-4 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] justify-between lg:min-h-[450px] md:min-h-[450px] min-h-[400px] max-w-[100%]">
         <div className="absolute -top-6 left-4 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center shadow-md">
           <Image
             src={"/assets/icons/profile.svg"}

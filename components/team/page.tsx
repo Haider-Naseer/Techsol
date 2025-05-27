@@ -38,7 +38,7 @@ const Team = () => {
                 </div>
               </div>
               <div className="lg:w-[80%] md:w-[80%] text-start">
-                <p className="lg:text-[23px] md:text-[23px] text-[18px] mt-[15px]">
+                <p className="lg:text-[23px] md:text-[23px] text-[16px] mt-[15px]">
                   <span className="text-[#82BED8] font-[600]">Ayesha</span> is a seasoned
                   professional with a highly successful 16-year banking career
                   primarily focused on Branch Management, Priority Banking,

@@ -32,9 +32,12 @@ export const ContactUs = () => {
                     <div>info@techsol-bh.com</div>
                   </li>
                   <li className="flex gap-[22px] text-[#263F49] text-[16px]  pt-[30px]">
-                    <MapIcon />
+                    <div className="w-[25px]">
+                      <MapIcon />
+                    </div>
                     <div>
-                      9033 Bldg 15, 3801, Block 338, Al- <br/> Qudaybiyah, Manama,
+                      9033 Bldg 15, 3801, Block 338, Al-{" "}
+                      <br className="responsive-br" /> Qudaybiyah, Manama,
                       Bahrain
                     </div>
                   </li>
@@ -56,7 +59,7 @@ export const ContactUs = () => {
                 Contact Us
               </h2>
               <p className="lg:text-[24px] md:text-[24px] text-[18px]">
-              Contact us to consult you better
+                Contact us to consult you better
               </p>
               <Link href={"/contact-us"}>
                 <CustomButton
